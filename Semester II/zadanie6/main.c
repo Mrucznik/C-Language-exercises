@@ -9,7 +9,7 @@ int main()
 		unsigned char bajt = *((unsigned char*)tab + i);
 		if (bajt >= 4 && bajt <= 7)
 		{
-			printf("%x\n", ((unsigned char*)tab + i));
+			printf("%p\n", ((unsigned char*)tab + i));
 		}
 	}
 

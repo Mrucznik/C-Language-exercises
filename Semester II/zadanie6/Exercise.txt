@@ -1,0 +1,1 @@
+ZAD 6: Napisz program, który przeszukuje tablicê z zadania 5 i wyœwietla adresy komórek (bajtów), których wartoœci nale¿¹ do zakresu <4; 7>

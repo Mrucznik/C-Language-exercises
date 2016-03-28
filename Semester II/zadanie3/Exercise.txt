@@ -1,0 +1,2 @@
+ZAD 3. Utwórz tablicê T typu double o d³ugoœci >= 100. Przypisz do niej dowolne wartoœci (random.org)
+a nastepnie wyznacz sumê oraz wartoœæ œredni¹. Nie u¿ywaj odwo³ania tablicowego (T[coœtam]).
