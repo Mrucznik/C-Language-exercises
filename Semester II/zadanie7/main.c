@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-unsigned int length(int tab[])
+unsigned int length(int *tab)
 {
 	int i = 0;
-	while (tab[i] != -1)
+	while (*(tab+i) != -1)
 		i++;
 	return i;
 }
@@ -11,6 +11,6 @@ unsigned int length(int tab[])
 int main()
 {
 	int tab[] = { 16909060, 84281096, 151653132, -1 };
-	printf("Dlugosc: %d\n", length(tab));
+	printf("Length: %d\n", length(tab));
 	return 0;
 }
