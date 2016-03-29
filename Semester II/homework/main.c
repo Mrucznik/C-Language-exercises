@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdarg.h>
 
 unsigned int length(const char* string)
 {
@@ -31,6 +32,84 @@ int getFirstWordLength(const char* string)
 	return i;
 }
 
+void printFromEndToBegin(const char* string)
+{
+	for (int i = length(string) - 1; i >= 0; i--)
+		fwrite((string + i), sizeof(char), 1, stdout);
+}
+
+void strcpy(char dest[], const char source[])
+{
+	int i = 0;
+	while ((dest[i] = source[i]) != '\0') {
+		i++;
+	}
+}
+
+void strcat(char* dest, const char* source)
+{
+	int i = 0, j;
+	while (dest[i] != '\0') {
+		i++;
+	}
+	j = i;
+	while((dest[j] = source[j - i]) != '\0')
+	{
+		j++;
+	}
+}
+
+unsigned int strlen(const char* str)
+{
+	int i = 0;
+	while (str[i] != '\0')
+		i++;
+	return i;
+}
+
+void writeOneWord(const char* str, int idx)
+{
+	while (str[idx] != '\0' && str[idx] != ' ')
+	{
+		putc(str[idx], stdout);
+		idx++;
+	}
+}
+
+void printInReverseWordOrder(const char* str)
+{
+	int end = strlen(str);
+	for (int i = end; i > 0; i--)
+	{
+		if (str[i] == ' ')
+		{
+			writeOneWord(str, i + 1);
+			putc(' ', stdout);
+		}
+	}
+	writeOneWord(str, 0);
+}
+
+char switchLetterSize(char letter)
+{
+	if (letter >= 'a' && letter <= 'z')
+		return letter - 'a' + 'A';
+	if(letter >= 'A' && letter <= 'Z')
+		return letter - 'A' + 'a';
+	return letter;
+}
+
+void strCopyAndSwitchLetterSize(char* dest, const char* source)
+{
+	int i = 0;
+	while (source[i] != '\0')
+	{
+		dest[i] = switchLetterSize(source[i]);
+		i++;
+	}
+	dest[i] = '\0';
+}
+
 int main()
 {
 	const char* t1 = "Ala Ma Kota a kot Ma AlE";
@@ -53,19 +132,36 @@ int main()
 	puts("");
 
 	//Zadanie 5. Wyœwietl tekst od koñca (ElA aM tok a atoK aM alA).
-	for (int i = length(t1)-1; i >= 0; i--)
-		fwrite((t1 + i), sizeof(char), 1, stdout);
+	printFromEndToBegin(t1);
 	puts("");
 
 	//Zadanie 6. (Napisz odpowiedniki funkcji strcpy, strcat oraz strlen. Uzyj modyfikatorów const w liœcie parametrów)
+	char test[32] = "Test";
+	char cpy[32] = "Siema";
+	char cat[32] = " PL";
+	puts(test);
+	strcpy(test, cpy);
+	puts(test);
+	strcat(test, cat);
+	puts(test);
+	printf("%d\n", strlen(test));
 
 	//Zadanie 7. (Wyœwietl s³owa t1 w odwrotnej kolejnoœci (Ale Ma kot a Kota Ma Ala)
+	printInReverseWordOrder(t1);
+	puts("");
 
 	//Zadanie 8. (Napisz funkcjê, tworzy kopiê tekstu t1, zmieniaj¹c znaki ma³e na du¿e a du¿e na ma³e)
+	char t2[32];
+	strCopyAndSwitchLetterSize(t2, t1);
+	puts(t2);
 
 	//Zadanie 9. (Napisz funkcjê, która po³¹czy 3 oddzielne napisy)
+	/*char t[128];
+	scal3napisy(t, t1, test, cpy);
+	puts(t);*/
 
 	//Zadanie 10. (Napisz funkcjê, która zast¹pi spacje w tekœcie znakiem "_". Tekst Ÿród³owy ma byæ przekazywany do funkcji jako jeden z parametrów.)
+	//Wtf: Illegal indirection???
 	return 0;
 }
 
