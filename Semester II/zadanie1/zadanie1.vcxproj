@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9E1AD598-4AB5-4918-920F-E08D011C13FD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Wskazniki</RootNamespace>
+    <RootNamespace>zadanie1</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
     <ProjectName>zadanie1</ProjectName>
   </PropertyGroup>
