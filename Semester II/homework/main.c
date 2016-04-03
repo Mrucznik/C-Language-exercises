@@ -110,6 +110,41 @@ void strCopyAndSwitchLetterSize(char* dest, const char* source)
 	dest[i] = '\0';
 }
 
+void strScal3Wyrazy(char* ss, char*s1, char*s2, char*s3)
+{
+	int i = 0, j = 0;
+	while(s1[i] != '\0')
+	{
+		ss[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != '\0')
+	{
+		ss[i] = s2[j];
+		i++;
+		j++;
+	}
+	j = 0;
+	while (s3[j] != '\0')
+	{
+		ss[i] = s3[j];
+		i++;
+		j++;
+	}
+	ss[i] = '\0';
+}
+
+void replaceSpaceToUnderscore(char* string)
+{
+	int i = 0;
+	while(string[i] != '\0')
+	{
+		if (string[i] == ' ')
+			string[i] = '_';
+		i++;
+	}
+}
+
 int main()
 {
 	const char* t1 = "Ala Ma Kota a kot Ma AlE";
@@ -156,12 +191,14 @@ int main()
 	puts(t2);
 
 	//Zadanie 9. (Napisz funkcjê, która po³¹czy 3 oddzielne napisy)
-	/*char t[128];
-	scal3napisy(t, t1, test, cpy);
-	puts(t);*/
+	char n1[] = "Liberty ", n2[] = "or ", n3[] = "death", n123[128];
+	strScal3Wyrazy(n123, n1, n2, n3);
+	puts(n123);
 
 	//Zadanie 10. (Napisz funkcjê, która zast¹pi spacje w tekœcie znakiem "_". Tekst Ÿród³owy ma byæ przekazywany do funkcji jako jeden z parametrów.)
-	//Wtf: Illegal indirection???
+	char napis[] = "Ala Ma Kota a kot Ma AlE";
+	replaceSpaceToUnderscore(napis);
+	puts(napis);
 	return 0;
 }
 
