@@ -22,4 +22,7 @@
   <ItemGroup>
     <Text Include="Exercise.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="file" />
+  </ItemGroup>
 </Project>
