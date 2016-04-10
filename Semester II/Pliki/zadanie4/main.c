@@ -2,7 +2,7 @@
 
 int main()
 {
-	FILE* f = fopen("C:\\Users\\student\\Desktop\\Pliki\\zadanie1\\file.txt", "r");
+	FILE* f = fopen("..\\zadanie1\\file.txt", "r");
 
 	if (f == NULL)
 	{
