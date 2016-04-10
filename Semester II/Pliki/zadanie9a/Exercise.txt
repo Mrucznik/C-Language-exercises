@@ -1,0 +1,2 @@
+ZAD 9a
+Napisz program, który pobiera z klawiatury teksty o maksymalnej d³ugoœci 100 znaków. Teksty te zapisywane s¹ do pliku. Program przerywa dzia³anie, jeœli u¿ytkownik wpisa³ pusty ci¹g znaków.
