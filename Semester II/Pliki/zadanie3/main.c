@@ -6,7 +6,7 @@ int main()
 {
 	srand((unsigned int)time(NULL));
 
-	FILE * f = fopen("file.txt", "w");
+	FILE* f = fopen("file.txt", "w");
 	if (f == NULL)
 	{
 		printf("Error! Nie mozna otworzyc pliku.");
@@ -16,7 +16,7 @@ int main()
 	int i = 1;
 	while (i <= 145)
 	{
-		fprintf(f, "%d ", rand()%101);
+		fprintf(f, "%d ", rand() % 101);
 		if (i % 10 == 0)
 			fputc('\n', f);
 		i++;
@@ -25,3 +25,4 @@ int main()
 	fclose(f);
 	return 0;
 }
+

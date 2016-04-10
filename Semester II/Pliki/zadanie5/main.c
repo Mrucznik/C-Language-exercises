@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-	FILE * f = fopen("zadania_pliki_DATA3.txt", "r");
+	FILE* f = fopen("zadania_pliki_DATA3.txt", "r");
 	int suma = 0, ile = 0;
 
 	if (f == NULL)
@@ -11,7 +10,7 @@ int main()
 		printf("Error! Nie mozna otworzyc pliku.");
 		return 1;
 	}
-	
+
 	fscanf(f, "%d", &ile);
 
 	while (!feof(f))
@@ -26,3 +25,4 @@ int main()
 	fclose(f);
 	return 0;
 }
+

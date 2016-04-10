@@ -2,7 +2,7 @@
 
 int main()
 {
-	FILE * f = fopen("file.txt", "w");
+	FILE* f = fopen("file.txt", "w");
 	if (f == NULL)
 	{
 		printf("Error! Nie mozna otworzyc pliku.");
@@ -15,3 +15,4 @@ int main()
 	fclose(f);
 	return 0;
 }
+
