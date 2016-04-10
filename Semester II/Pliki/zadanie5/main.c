@@ -20,7 +20,7 @@ int main()
 		suma += liczba;
 	}
 
-	printf("Suma: %d\nSrednia: %d\n", suma, suma / ile);
+	printf("Ile: %d\nSuma: %d\nSrednia: %d\n", ile, suma, suma / ile);
 
 	fclose(f);
 	return 0;

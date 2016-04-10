@@ -1,0 +1,2 @@
+ZAD 9b
+Napisz program, który wczytuje i wyœwietla teksty z zadania 9a. Po wyœwietleni tekstów program ma podaæ ich liczbê.
