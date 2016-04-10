@@ -1,0 +1,2 @@
+ZAD 3
+Napisz program, który losuje liczby z zakresu 0-1000 i zapisuje je do pliku tekstowego. W jednym wierszu pliku mo¿e znajdowaæ siê maks. 10 liczb. Liczb ma byæ 145.

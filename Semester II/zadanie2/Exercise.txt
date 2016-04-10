@@ -1,3 +1,0 @@
-ZAD 2. Napisz program który dla tablicy int T[10]
-wype³nia j¹ wartoœciami od 0 do 9. Do wype³niania
-u¿ywaj zmiennej wskaŸnikowej (nie nazwy T).

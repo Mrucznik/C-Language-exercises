@@ -1,0 +1,2 @@
+ZAD 7
+Napisz program, który wczytuje dane z pliku utworzonego w zadaniu 6.

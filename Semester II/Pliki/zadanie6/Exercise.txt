@@ -1,0 +1,2 @@
+ZAD 6
+Napisz program, który generuje tablicê 100 liczb losowych typu float od -100 do 100 a nastêpnie zapisuje j¹ do pliku binarnego.

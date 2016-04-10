@@ -1,0 +1,2 @@
+ZAD 7.
+Dana jest tablica typu int: {16909060, 84281096, 151653132, -1}. Zak³adaj¹c, ¿e -1 jest znacznikiem koñca tablicy (nie wartoœci¹), napisz program, który policzy liczbê danych w tablicy (tutaj 3).

@@ -1,0 +1,2 @@
+Zad 1
+Napisz program, który zapisuje do pliku tekstowego liczby od 0 do 100. Ka¿da liczba ma znajdowaæ siê w nowym wierszu.

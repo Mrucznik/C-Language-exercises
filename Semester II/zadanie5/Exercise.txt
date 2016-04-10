@@ -1,2 +1,0 @@
-ZAD 5: Napisz program, który wyœwietli pamiêæ tablicy {16909060, 84281096, 151653132} w postaci wartoœci kolejnych bajtów.
-Ile bêdzie bajtów? Jakie bêd¹ ich wartoœci?

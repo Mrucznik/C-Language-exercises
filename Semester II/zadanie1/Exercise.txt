@@ -1,2 +1,0 @@
-ZAD 1. Napisz program, ktÛry dla trzech zmiennych dowolnego typu pobiera ich adresy i zapisuje do zmiennych wskaünikowych tego samego typu.
-Uøyj zmiennych wskaünikowych do modyfikacji zawartoúci kaødej ze zmiennych.

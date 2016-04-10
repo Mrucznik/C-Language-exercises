@@ -1,0 +1,2 @@
+ZAD 4
+Napisz program, który wczytuje i wyœwietla na ekranie liczby z pliku, utworzonego w zadaniu 1.
