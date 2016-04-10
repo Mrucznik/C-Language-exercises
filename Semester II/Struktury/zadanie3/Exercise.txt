@@ -1,0 +1,29 @@
+﻿ZAD 3.
+Napisz program realizujący bazę danych kontaktów. Podstawą ma być struktura kontakt_t, pozwalająca na przechowanie:
+imienia, nazwiska, adresu, telefonu, daty urodzin oraz adresu email.
+Program ma możliwość przechowywania maks. 100 kontaktów.
+Funkcje:
+- Baza kontaktów powinna być wczytywana przy starcie programu i zapisywana przy kończeniu.
+- Wybieranie aktualnego rekordu.
+- Wyświetlanie wybranego rekordu.
+- Edycja wybranego rekordu.
+- Usuwanie wybranego rekordu.
+
+Obsługa programu powinna być zarealizowana za pomocą interfejsu tekstowego, np.: 									╔═╗║╝╚─╟╢
+   ╔════════════════════════╗
+   ║  Twoje menu:           ║
+   ╟────────────────────────╢
+   ║  Aktualny rekord #23   ║	
+   ║ Imie:                  ║
+   ║                 Tomasz ║	
+   ║ Nazwisko:              ║
+   ║               Jaworski ║	
+   ╟────────────────────────╢
+   ║ 1. Następny rekord     ║	
+   ║ 2. Poprzedni rekord    ║	
+   ║ 3. Wyświetl cały rekord║	
+   ║ 4. Usuń rekord         ║	
+   ║ 5. Dodaj rekord        ║	
+   ║ 0. Wyjdź z programu    ║	
+   ╚════════════════════════╝
+      Twój wybór: 

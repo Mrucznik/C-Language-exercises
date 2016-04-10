@@ -1,0 +1,7 @@
+ZAD 2.
+Dodaj funkcje:
+void zapisz_dane_t(const char* plik, const student_t* rekord);
+void wczytaj_dane_t(const char* plik, student_t* rekord);
+void zapisz_dane_b(const char* plik, const student_t* rekord);
+void wczytaj_dane_b(const char* plik, student_t* rekord);
+które zapisuj¹/odczytuj¹ strukturê z pliku. Przyrostki _t oraz _b oznaczaj¹, ¿e pliki maja byæ zapisywane/odczytywane w trybie tekstowym oraz binarnym.
