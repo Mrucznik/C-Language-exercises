@@ -2,7 +2,6 @@
 
 int main()
 {
-
 	FILE* f = fopen("..\\zadanie6\\file", "rb");
 	float tab[100];
 

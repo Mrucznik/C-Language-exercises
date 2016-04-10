@@ -3,7 +3,7 @@
 int main()
 {
 	char filename[FILENAME_MAX];
-	
+
 	printf("Podaj nazwe pliku do wczytania: ");
 	scanf("%s", filename);
 
@@ -17,7 +17,7 @@ int main()
 
 	while (!feof(f))
 	{
-		char tmp=0;
+		char tmp = 0;
 		fread(&tmp, sizeof(tmp), 1, f);
 		printf("%d ", tmp);
 	}
