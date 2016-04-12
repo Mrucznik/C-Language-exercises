@@ -7,21 +7,17 @@ union intbyteword
 	short word[2];
 };
 
-#pragma pack(push)  /* push current alignment to stack */
-#pragma pack(1)     /* set alignment to 1 byte boundary */
 struct Bit8
 {
-	unsigned b1 : 1;
-	unsigned b2 : 1;
-	unsigned b3 : 1;
-	unsigned b4 : 1;
-	unsigned b5 : 1;
-	unsigned b6 : 1;
-	unsigned b7 : 1;
-	unsigned b8 : 1;
+	unsigned char b1 : 1;
+	unsigned char b2 : 1;
+	unsigned char b3 : 1;
+	unsigned char b4 : 1;
+	unsigned char b5 : 1;
+	unsigned char b6 : 1;
+	unsigned char b7 : 1;
+	unsigned char b8 : 1;
 };
-
-#pragma pack(pop)   /* restore original alignment from stack */
 
 struct Bit32
 {
@@ -109,7 +105,7 @@ int main()
 	//Zadanie 3.
 	union bytebit u2;
 	printf("Enter a byte value: ");
-	scanf("%d", &u2.byte);
+	scanf("%c", &u2.byte);
 	printf("This value in bits: ");
 	printBit8Struct(u2.bit);
 
@@ -117,23 +113,13 @@ int main()
 	union intwordbytebit u3;
 	printf("\nEnter an unsigned integer value: ");
 	scanf("%d", &u3.integer);
-	//u3.bit8[2].b1 = 1;
-	u3.bit32.b4 = 1;
 	printf("This value in unsinged int type looks like: %u\n", u3.integer);
 	printf("This value in two words looks like: %d %d\n", u3.word[0], u3.word[1]);
 	printf("This value in 4 bytes looks like: %d %d %d %d\n", u3.byte[0], u3.byte[1], u3.byte[2], u3.byte[3]);
-	printf("This value in 4x 8 bit looks like: %d %d |", sizeof(struct Bit8), sizeof(struct Bit32));
+	printf("This value in 4x 8 bit looks like: ");
 	printBit8Struct(u3.bit8[0]);
 	printf(" ");
 	printBit8Struct(u3.bit8[1]);
-	u3.bit8[2].b1 = 1;
-	u3.bit8[2].b2 = 0;
-	u3.bit8[2].b3 = 0;
-	u3.bit8[2].b4 = 0;
-	u3.bit8[2].b5 = 0;
-	u3.bit8[2].b6 = 0;
-	u3.bit8[2].b7 = 0;
-	u3.bit8[2].b8 = 0;
 	printf(" ");
 	printBit8Struct(u3.bit8[2]);
 	printf(" ");
