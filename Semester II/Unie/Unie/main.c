@@ -105,7 +105,7 @@ int main()
 	//Zadanie 3.
 	union bytebit u2;
 	printf("Enter a byte value: ");
-	scanf("%c%c", &u2.byte, stdout);
+	scanf("%c%*c", &u2.byte);
 	printf("This value in bits: ");
 	printBit8Struct(u2.bit);
 
@@ -128,6 +128,8 @@ int main()
 	printf("This value in bits looks like: ");
 	printBit32Struct(u3.bit32);
 	printf("\n");
+
+	//Zadanie 5.
 
 	return 0;
 }
