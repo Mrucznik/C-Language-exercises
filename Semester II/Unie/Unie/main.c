@@ -145,7 +145,10 @@ int main()
 	printf("\n");
 
 	//Zadanie 5.
-
+	int number=0;
+	printf("Podaj wartosc: ");
+	scanf("%u", &number);
+	printf("Ta wartosc jest %s bitowo.\n", isBitsEven(number) ? "parzysta" : "nieparzysta");
 
 	return 0;
 }
