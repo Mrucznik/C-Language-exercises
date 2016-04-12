@@ -91,6 +91,21 @@ void printBit32Struct(struct Bit32 u)
 	}
 }
 
+int countBits(unsigned int number)
+{
+	int count = 0;
+	while (number != 0) {
+		number &= (number - 1); //awesome, thanks Brian Kernighan!
+		count++;
+	}
+	return count;
+}
+
+int isBitsEven(unsigned int number)
+{
+	return !(countBits(number) % 2);
+}
+
 int main()
 {
 	//Zadanie 1
@@ -130,6 +145,7 @@ int main()
 	printf("\n");
 
 	//Zadanie 5.
+
 
 	return 0;
 }
