@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-union intbajt
+union intbyteword
 {
 	int integer;
-	unsigned char bajt[4];
+	unsigned char byte[4];
+	short word[2];
 };
 
-struct sBit8
+struct Bit8
 {
 	unsigned b1 : 1;
 	unsigned b2 : 1;
@@ -18,7 +19,7 @@ struct sBit8
 	unsigned b8 : 1;
 };
 
-struct sBit32
+struct Bit32
 {
 	unsigned b1 : 1;
 	unsigned b2 : 1;
@@ -54,62 +55,89 @@ struct sBit32
 	unsigned b32 : 1;
 };
 
-union Bit
+union bytebit
 {
-	unsigned char bajt;
-	struct sBit8 bit;
+	unsigned char byte;
+	struct Bit8 bit;
 };
 
 
-union manyForms
+union intwordbytebit
 {
 	unsigned int integer;
-	unsigned short slowo[2];
-	unsigned char bajt[4];
-	struct sBit32 bit32;
-	struct sBit8 bit8[4];
+	unsigned short word[2];
+	unsigned char byte[4];
+	struct Bit8 bit8[4];
+	struct Bit32 bit32;
 };
 
-void print8BitUnion(union Bit u)
+void printBit8Struct(struct Bit8 u)
 {
 	unsigned int maska = 0b1;
-	while (maska != (0b1 << 8))
+	while (maska != 0b100000000) //0b1 << 8
 	{
-		printf(u.bajt & maska ? "1" : "0");
+		printf(*(unsigned char*)&u & maska ? "1" : "0");
 		maska <<= 1;
 	}
 }
 
-void print32BitUnion(union manyForms u)
+void printBit32Struct(struct Bit32 u)
 {
 	unsigned int maska = 0b1;
-	while (maska != (0b1 << 32))
+	while (maska != 0x80000000) //0b1 << 32
 	{
-		printf(u.integer & maska ? "1" : "0");
+		printf(*(unsigned int*)&u & maska ? "1" : "0");
 		maska <<= 1;
 	}
 }
 
 int main()
 {
-	//Zadanie 1-2
-	union intbajt u;
-	u.integer = 122443244;
-	printf("%d %d\n", u.bajt[0], u.bajt[3]);
+	//Zadanie 1
+	union intbyteword u;
+	u.integer = 0x41424344;
+	printf("Number: %d\n", u.integer);
+	printf("Bytes: %d %d %d %d\n", u.byte[0], u.byte[1], u.byte[2], u.byte[3]);
+	
+	//Zadanie 2.
+	printf("Words: %d %d\n", u.word[0], u.word[1]);
 
 	//Zadanie 3.
-	union Bit bitunion;
-	printf("Podaj wartosc bajta : ");
-	scanf("%d", &bitunion.bajt);
-	printf("\n");
-	print8BitUnion(bitunion);
+	union bytebit u2;
+	printf("Enter a byte value: ");
+	scanf("%d", &u2.byte);
+	printf("This value in bits: ");
+	printBit8Struct(u2.bit);
 
 	//Zadanie 4.
-	union manyForms many;
-	many.integer = 122443244;
-	printf("%u", many.integer);
-	printf("%u%u", many.slowo[0], many.slowo[2]);
-	print32BitUnion(many);
+	union intwordbytebit u3;
+	printf("\nEnter an unsigned integer value: ");
+	scanf("%d", &u3.integer);
+	//u3.bit8[2].b1 = 1;
+	u3.bit32.b4 = 1;
+	printf("This value in unsinged int type looks like: %u\n", u3.integer);
+	printf("This value in two words looks like: %d %d\n", u3.word[0], u3.word[1]);
+	printf("This value in 4 bytes looks like: %d %d %d %d\n", u3.byte[0], u3.byte[1], u3.byte[2], u3.byte[3]);
+	printf("This value in 4x 8 bit looks like: %d %d |", sizeof(struct Bit8), sizeof(struct Bit32));
+	printBit8Struct(u3.bit8[0]);
+	printf(" ");
+	printBit8Struct(u3.bit8[1]);
+	u3.bit8[2].b1 = 1;
+	u3.bit8[2].b2 = 0;
+	u3.bit8[2].b3 = 0;
+	u3.bit8[2].b4 = 0;
+	u3.bit8[2].b5 = 0;
+	u3.bit8[2].b6 = 0;
+	u3.bit8[2].b7 = 0;
+	u3.bit8[2].b8 = 0;
+	printf(" ");
+	printBit8Struct(u3.bit8[2]);
+	printf(" ");
+	printBit8Struct(u3.bit8[3]);
+	printf("\n");
+	printf("This value in bits looks like: ");
+	printBit32Struct(u3.bit32);
+	printf("\n");
 
 	return 0;
 }
