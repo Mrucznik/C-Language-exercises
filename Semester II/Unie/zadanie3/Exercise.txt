@@ -1,0 +1,2 @@
+ZAD 3.
+Napisz uniê bitow¹, która pozwoli wyœwietliæ wszystkie osiem bitów z bajta. Program ma pobieraæ wartoœæ tego bajta od u¿ytkownika.

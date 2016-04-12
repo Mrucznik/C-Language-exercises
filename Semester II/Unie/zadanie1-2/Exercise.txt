@@ -1,0 +1,6 @@
+ZAD 1.
+Zaprojektuj uniê, która pozwala rozbiæ liczbe typu int tak, aby mo¿liwe by³o wyœwietlenie wszystkich bajtów sk³adowych.
+Dla liczby int o wartoœci 0x41424344 wyœwietl wartoœci bajtów oraz wyjaœnij, jaki maj¹ one sens i jak powstaje z nich wartoœæ 1094861636. 
+
+ZAD 2.
+Rozszerz zadanie 1 tak, aby wyœwietlaæ starsze i m³odsze s³owo z liczby typu int. Jaki typ bêdzie poprawnie reprezentowa³ s³owo? Czym jest s³owo?

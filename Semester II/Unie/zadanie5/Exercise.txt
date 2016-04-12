@@ -1,0 +1,2 @@
+ZAD 5.
+Napisz program, który sprawdzi, czy wartoœæ podana w typie unsigned int jest parzysta bitowo. Definicjê bitu parzystoœci mo¿na znaleŸæ tutaj: https://pl.wikipedia.org/wiki/Kontrola_parzysto%C5%9Bci

@@ -1,0 +1,7 @@
+ZAD 4.
+Napisz program, który ka¿d¹ podan¹ z klawiatury liczbê typu unsigned int wyœwietla w nastêpuj¹cych formach:
+- unsigned int
+- 2x s³owo
+- 4x bajt
+- 32x bit
+- 4x 8x bit
