@@ -7,6 +7,8 @@ union intbyteword
 	short word[2];
 };
 
+#pragma pack(push)  /* push current alignment to stack */
+#pragma pack(1)     /* set alignment to 1 byte boundary */
 struct Bit8
 {
 	unsigned b1 : 1;
@@ -18,6 +20,8 @@ struct Bit8
 	unsigned b7 : 1;
 	unsigned b8 : 1;
 };
+
+#pragma pack(pop)   /* restore original alignment from stack */
 
 struct Bit32
 {
