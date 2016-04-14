@@ -7,19 +7,17 @@ typedef struct kontakt_t
 	int telefon;
 	struct Data
 	{
-		unsigned char day;
-		unsigned char month;
-		short year;
+		int day;
+		int month;
+		int year;
 	} data_urodzin;
 	char email[64];
 } Contact;
 
-void LoadContacts(Contact[]);
-void SaveContacts(Contact[]);
-void LoadContact(Contact);
-void SaveContact(Contact);
-void CreateContact(Contact);
-void DeleteContact(Contact);
+void LoadContacts(Contact*[], int);
+void SaveContacts(Contact[], int);
+void CreateContact(Contact*);
+void DeleteContact(Contact*);
 void NextContact(Contact);
 void PreviousContact(Contact);
 void PrintContact(Contact);

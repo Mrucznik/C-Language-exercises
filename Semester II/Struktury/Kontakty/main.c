@@ -4,6 +4,7 @@
 int main()
 {
 	Contact kontakty[100];
-	kontakty[1].telefon = 1;
+	CreateContact(&kontakty[0]);
+	PrintContact(kontakty[0]);
 	return 0;
 }
