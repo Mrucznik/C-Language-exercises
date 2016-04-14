@@ -14,7 +14,12 @@ typedef struct kontakt_t
 	char email[64];
 } Contact;
 
-void LoadContacts();
-void SaveContacts();
-void LoadContact();
-void SaceContact();
+void LoadContacts(Contact[]);
+void SaveContacts(Contact[]);
+void LoadContact(Contact);
+void SaveContact(Contact);
+void CreateContact(Contact);
+void DeleteContact(Contact);
+void NextContact(Contact);
+void PreviousContact(Contact);
+void PrintContact(Contact);
