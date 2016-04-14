@@ -149,7 +149,7 @@
     <Text Include="Exercise.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="kontakt_t.c" />
+    <ClCompile Include="contact.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="utils.c" />
   </ItemGroup>

@@ -21,10 +21,10 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kontakt_t.c">
+    <ClCompile Include="utils.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="utils.c">
+    <ClCompile Include="contact.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
