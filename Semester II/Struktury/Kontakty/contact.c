@@ -44,18 +44,24 @@ void SaveContacts(Contact c[], int ile)
 void CreateContact(Contact* c)
 {
 	c->filled = 1;
-	getVariableFromConsole("Podaj imie: ", "%s[32]", c->imie);
-	getVariableFromConsole("Podaj nazwisko: ", "%s[32]", c->nazwisko);
-	getVariableFromConsole("Podaj adres: ", "%s[64]", c->adres);
-	getVariableFromConsole("Podaj telefon: ", "%d", &c->telefon);
-	getVariableFromConsole("Podaj date urodzin (format: dzien/miesiac/rok): ", "%d/%d/%d", &c->data_urodzin.day, &c->data_urodzin.month, &c->data_urodzin.year);
-	getVariableFromConsole("Podaj e-mail: ", "%s[64]", c->email);
+	getVariableFromConsoleWithMessagePrinting("Podaj imie: ", "%s[32]", c->imie);
+	getVariableFromConsoleWithMessagePrinting("Podaj nazwisko: ", "%s[32]", c->nazwisko);
+	getVariableFromConsoleWithMessagePrinting("Podaj adres: ", "%s[64]", c->adres);
+	getVariableFromConsoleWithMessagePrinting("Podaj telefon: ", "%d", &c->telefon);
+	getVariableFromConsoleWithMessagePrinting("Podaj date urodzin (format: dzien/miesiac/rok): ", "%d/%d/%d", &c->data_urodzin.day, &c->data_urodzin.month, &c->data_urodzin.year);
+	getVariableFromConsoleWithMessagePrinting("Podaj e-mail: ", "%s[64]", c->email);
+}
+
+void EditContact(Contact* c)
+{
+	getVariableFromConsoleWithMessagePrinting("Podaj zmieniony telefon: ", "%d", &c->telefon);
+	getVariableFromConsoleWithMessagePrinting("Podaj zmieniony e-mail: ", "%s[64]", c->email);
 }
 
 void DeleteContact(Contact* c)
 {
 	c->filled = 0;
-	printf("Rekord zostal pomyslnie usuniety!");
+	printf("Rekord zostal pomyslnie usuniety!\n");
 }
 
 void PrintContact(Contact c)
@@ -67,7 +73,7 @@ void PrintContact(Contact c)
 	}
 	else
 	{
-		printf("Ten rekord jest pusty!");
+		printf("Ten rekord jest pusty!\n");
 	}
 }
 
@@ -83,13 +89,13 @@ int GetNextContactIndex(Contact c[], int index, int zilu)
 
 		i++;
 	} 
-	printf("Nie ma wiecej kontaktow po prawo!");
+	printf("Nie ma wiecej kontaktow po prawo!\n");
 	return index;
 }
 
-int GetPreviousContactIndex(Contact c[], int index, int zilu)
+int GetPreviousContactIndex(Contact c[], int index)
 {
-	int i = index -1;
+	int i = index-1;
 	while (i > -1)
 	{
 		if (c[i].filled)
@@ -98,7 +104,7 @@ int GetPreviousContactIndex(Contact c[], int index, int zilu)
 		}
 		i--;
 	} 
-	printf("Nie ma wiecej kontaktow po lewo!");
+	printf("Nie ma wiecej kontaktow po lewo!\n");
 	return index;
 }
 

@@ -20,9 +20,10 @@ typedef struct kontakt_t
 void LoadContacts(Contact[], int);
 void SaveContacts(Contact[], int);
 void CreateContact(Contact*);
+void EditContact(Contact*);
 void DeleteContact(Contact*);
 void PrintContact(Contact);
 
 int GetEmptyContactIndex(Contact[], int);
 int GetNextContactIndex(Contact[], int, int);
-int GetPreviousContactIndex(Contact[], int, int);
+int GetPreviousContactIndex(Contact[], int);

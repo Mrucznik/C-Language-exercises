@@ -1,2 +1,2 @@
 #pragma once
-void getVariableFromConsole(const char[], const char [], ...);
+void getVariableFromConsoleWithMessagePrinting(const char[], const char [], ...);
