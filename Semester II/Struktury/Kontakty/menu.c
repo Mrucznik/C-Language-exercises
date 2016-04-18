@@ -1,6 +1,7 @@
 ﻿#include "menu.h"
 #include <conio.h>
 #include <stdio.h>
+#include "contact.h"
 
 void menuInit(Menu* menu)
 {
@@ -47,7 +48,17 @@ void controlMenu(Menu* menu)
 	}
 }
 
-void printMenu(Menu menu)
+void printMenu(Menu menu, Contact* kontakt)
 {
-	printf("Contact #%d\n", menu.record);
+	puts  ("╔═══════════════════════════════════╗");
+	printf("║  Aktualny rekord #%02d              ║\n", menu.record);
+	printf("║ Imie: %-27s ║\n", kontakt[menu.option].imie);
+	printf("║ Nazwisko: %-23s ║\n", kontakt[menu.option].nazwisko);
+	printf("║ Telefon: %-24d ║\n", kontakt[menu.option].telefon);
+	puts  ("╟───────────────────────────────────╢");
+	puts  ("║ E - edytuj      ║ U - usuń        ║");
+	puts  ("║ D - dodaj       ║ W - wyświetl    ║");
+	puts  ("║ <- - poprzedni  ║ -> - następny   ║");
+	puts  ("║ ESC - wyjdz     ║                 ║");
+	puts  ("╚═══════════════════════════════════╝");
 }

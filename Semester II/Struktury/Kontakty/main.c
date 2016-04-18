@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
 #include "contact.h"
 #include "menu.h"
-#include <stdlib.h>
 
 #define MAX_CONTACTS	100
 
@@ -44,6 +45,9 @@ void doTasks(Menu *menu, Contact *kontakty)
 
 int main()
 {
+	//config:
+	setlocale(LC_CTYPE, "");
+
 	Contact kontakty[MAX_CONTACTS];
 	LoadContacts(kontakty, MAX_CONTACTS);
 
@@ -53,7 +57,7 @@ int main()
 	while(menu.option != EXIT)
 	{
 		system("cls");
-		printMenu(menu);
+		printMenu(menu, kontakty);
 		controlMenu(&menu);
 		doTasks(&menu, kontakty);
 	}

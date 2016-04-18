@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include "contact.h"
 
 #define KEY_ESC 27
 #define KEY_LEFT 75
@@ -27,5 +28,5 @@ typedef struct menu
 } Menu;
 
 void controlMenu(Menu*);
-void printMenu(Menu);
+void printMenu(Menu, Contact*);
 void menuInit(Menu*);
