@@ -1,6 +1,6 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
+#include <windows.h>
 #include "contact.h"
 #include "menu.h"
 
@@ -46,7 +46,8 @@ void doTasks(Menu *menu, Contact *kontakty)
 int main()
 {
 	//config:
-	setlocale(LC_CTYPE, "");
+	SetConsoleOutputCP(437); //znaczki ╔═╗║╝╚─╟╢
+	system("mode CON: COLS=38 LINES=20");
 
 	Contact kontakty[MAX_CONTACTS];
 	LoadContacts(kontakty, MAX_CONTACTS);

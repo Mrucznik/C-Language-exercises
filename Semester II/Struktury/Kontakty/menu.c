@@ -1,4 +1,4 @@
-ï»¿#include "menu.h"
+#include "menu.h"
 #include <conio.h>
 #include <stdio.h>
 #include "contact.h"
@@ -50,15 +50,15 @@ void controlMenu(Menu* menu)
 
 void printMenu(Menu menu, Contact* kontakt)
 {
-	puts  ("â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—");
-	printf("â•‘  Aktualny rekord #%02d              â•‘\n", menu.record);
-	printf("â•‘ Imie: %-27s â•‘\n", kontakt[menu.option].imie);
-	printf("â•‘ Nazwisko: %-23s â•‘\n", kontakt[menu.option].nazwisko);
-	printf("â•‘ Telefon: %-24d â•‘\n", kontakt[menu.option].telefon);
-	puts  ("â•Ÿâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•¢");
-	puts  ("â•‘ E - edytuj      â•‘ U - usuÅ„        â•‘");
-	puts  ("â•‘ D - dodaj       â•‘ W - wyÅ›wietl    â•‘");
-	puts  ("â•‘ <- - poprzedni  â•‘ -> - nastÄ™pny   â•‘");
-	puts  ("â•‘ ESC - wyjdz     â•‘                 â•‘");
-	puts  ("â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•");
+	puts  ("ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»");
+	printf("º       Aktualny rekord: #%02d        º\n", menu.record);
+	printf("º Imie: %-27s º\n", kontakt[menu.option].imie);
+	printf("º Nazwisko: %-23s º\n", kontakt[menu.option].nazwisko);
+	printf("º Telefon: %-24d º\n", kontakt[menu.option].telefon);
+	puts  ("ÇÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶");
+	puts  ("º E - edytuj      ³ U - usun        º");
+	puts  ("º D - dodaj       ³ W - wyswietl    º");
+	puts  ("º <- - poprzedni  ³ -> - nastepny   º");
+	puts  ("º ESC - wyjdz     ³                 º");
+	puts  ("ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼");
 }
