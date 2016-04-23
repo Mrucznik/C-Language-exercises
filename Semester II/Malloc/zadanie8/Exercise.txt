@@ -1,0 +1,4 @@
+8. Zmodyfikuj poprzednie zadanie tak, aby pola nie by³y tablicami znaków a wskaŸnikami.
+Ponownie napisz funkcje
+student_t* wypelnij(void);
+oraz wyswietl i zwolnij. Pamiêtaj ze zwolniæ nale¿y nie tylko pamiêæ struktury student_t ale te¿ i tekstów w poszczególnych polach.
