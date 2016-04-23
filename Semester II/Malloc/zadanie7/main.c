@@ -20,12 +20,12 @@ student_t* wypelnij(void)
 	return student;
 }
 
-void printstudent(student_t *student)
+void wyswietl(student_t *student)
 {
 	printf("Imie: %s\nNazwisko: %s\nAlbum: %s\n", student->imie, student->nazwisko, student->album);
 }
 
-void freestudent(student_t *student)
+void zwolnij(student_t *student)
 {
 	free(student);
 }
