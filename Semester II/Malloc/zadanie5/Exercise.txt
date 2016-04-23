@@ -1,0 +1,2 @@
+5. Napisz funkcjê alokuj¹c¹ tablice typu float o podanej liczbie elementów. Wykorzystaj prototyp:
+float* alokuj(int N);

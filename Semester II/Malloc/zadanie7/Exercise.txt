@@ -1,0 +1,3 @@
+7. Utwórz strukturê student_t, zawieraj¹c¹ trzy pola: imie (100 znaków), nazwisko (100 znaków), album (10 znaków). Napisz funkcjê, która zwraca wskaŸnik na strukturê wype³nion¹ danymi, podanymi z klawiatury przez u¿ytkownika. Przyk³adowy prototyp:
+student_t* wypelnij(void);
+Dodaj funkcjê wyœwietlaj¹c¹ oraz zwalniaj¹c¹ pamiêæ.
