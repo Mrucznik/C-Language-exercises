@@ -1,0 +1,2 @@
+1. Napisz program, który alokuje tablicê 100 liczb typu float. Wype³nij¹ j¹ wartoœciami od 0 do 99 i wyœwietl. Pamiêtaj o zwolnieniu pamiêci przed zakoñczeniem programu.
+ 
