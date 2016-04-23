@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{92696BAA-AB99-4709-8027-92DB1E84CBA0}</ProjectGuid>
+    <ProjectGuid>{DDE21B42-9700-4C50-ABE8-617A7ECFF88C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Malloc</RootNamespace>
+    <RootNamespace>zadanie8</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
