@@ -1,0 +1,1 @@
+2. Spróbuj zaalokowaæ 1GB pamiêci. SprawdŸ, jak zachowa siê system operacyjny (skorzystaj z mened¿era zadañ).
