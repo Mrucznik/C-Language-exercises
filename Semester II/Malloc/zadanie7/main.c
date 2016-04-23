@@ -34,7 +34,7 @@ int main(void)
 {
 	student_t *student;
 	student = wypelnij();
-	printstudent(student);
-	freestudent(student);
+	wyswietl(student);
+	zwolnij(student);
 	return 0;
 }
