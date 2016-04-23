@@ -8,39 +8,40 @@
 
 void doTasks(Menu *menu, Contact *kontakty)
 {
-	int *record = &menu->record;
+	int oldOption = NAVIGATE;
 	switch(menu->option)
 	{
 	case NAVIGATE:
-		//Nothing to do
-		break;
+		printMenu(*menu, kontakty);
+		return;
 	case NEXT_RECORD:
-		*record = GetNextContactIndex(kontakty, *record, MAX_CONTACTS);
+		menu->record = GetNextContactIndex(kontakty, menu->record, MAX_CONTACTS);
 		break;
 	case PREVIOUS_RECORD:
-		*record = GetPreviousContactIndex(kontakty, *record);
+		menu->record = GetPreviousContactIndex(kontakty, menu->record);
 		break;
 	case PRINT_RECORD:
-		PrintContact(kontakty[*record]);
-		break;
+		PrintContact(kontakty[menu->record]);
+		return;
 	case ADD_RECORD:
-		*record = GetEmptyContactIndex(kontakty, MAX_CONTACTS);
-		if (*record != INVAILD_CONTACT)
-			CreateContact(&kontakty[*record]);
+		menu->record = GetEmptyContactIndex(kontakty, MAX_CONTACTS);
+		if (menu->record != INVAILD_CONTACT)
+			CreateContact(&kontakty[menu->record]);
 		break;
 	case REMOVE_RECORD:
-		DeleteContact(&kontakty[*record]);
+		DeleteContact(&kontakty[menu->record]);
 		break;
 	case EDIT_RECORD:
-		EditContact(&kontakty[*record]);
+		EditContact(&kontakty[menu->record]);
 		break;
 	case EXIT:
 		return;
 	default:
 		printf("ERROR! Nieprawidlowa opcja!\n");
-		break;
+		return;
 	}
 	menu->option = NAVIGATE;
+	doTasks(menu, kontakty);
 }
 
 int main()
@@ -48,6 +49,7 @@ int main()
 	//config:
 	SetConsoleOutputCP(437); //znaczki ╔═╗║╝╚─╟╢
 	system("mode CON: COLS=38 LINES=20");
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
 
 	Contact kontakty[MAX_CONTACTS];
 	LoadContacts(kontakty, MAX_CONTACTS);
@@ -58,9 +60,8 @@ int main()
 	while(menu.option != EXIT)
 	{
 		system("cls");
-		printMenu(menu, kontakty);
-		controlMenu(&menu);
 		doTasks(&menu, kontakty);
+		controlMenu(&menu);
 	}
 
 	SaveContacts(kontakty, MAX_CONTACTS);

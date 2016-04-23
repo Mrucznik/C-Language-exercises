@@ -1,7 +1,7 @@
-#include "contact.h"
 #include <stdio.h>
-#include "utils.h"
 #include <stdlib.h>
+#include "utils.h"
+#include "contact.h"
 
 #define FILENAME "kontakty.db"
 
@@ -61,7 +61,6 @@ void EditContact(Contact* c)
 void DeleteContact(Contact* c)
 {
 	c->filled = 0;
-	printf("Rekord zostal pomyslnie usuniety!\n");
 }
 
 void PrintContact(Contact c)

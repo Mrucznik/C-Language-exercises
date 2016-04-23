@@ -22,6 +22,8 @@ typedef struct menu
 		ADD_RECORD,
 		REMOVE_RECORD,
 		EDIT_RECORD,
+		EDIT_UP,
+		EDIT_DOWN,
 		EXIT
 	} option;
 	int record;
