@@ -1,0 +1,1 @@
+3. Alokuj bloki pamiêci po 1kB w nieskoñczonej pêtli. SprawdŸ, jak zachowa siê system operacyjny (skorzystaj z mened¿era zadañ).
