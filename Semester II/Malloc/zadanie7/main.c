@@ -10,7 +10,7 @@ typedef struct student_t
 
 student_t* wypelnij(void)
 {
-	student_t *student = (student_t*)malloc(sizeof(student_t));
+	student_t* student = (student_t*)malloc(sizeof(student_t));
 	printf("Podaj imie: ");
 	scanf("%s[100]", student->imie);
 	printf("Podaj nazwisko: ");
@@ -20,21 +20,22 @@ student_t* wypelnij(void)
 	return student;
 }
 
-void wyswietl(student_t *student)
+void wyswietl(student_t* student)
 {
 	printf("Imie: %s\nNazwisko: %s\nAlbum: %s\n", student->imie, student->nazwisko, student->album);
 }
 
-void zwolnij(student_t *student)
+void zwolnij(student_t* student)
 {
 	free(student);
 }
 
 int main(void)
 {
-	student_t *student;
+	student_t* student;
 	student = wypelnij();
 	wyswietl(student);
 	zwolnij(student);
 	return 0;
 }
+

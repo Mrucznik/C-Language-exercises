@@ -5,10 +5,11 @@
 
 int main(void)
 {
-	double *number;
+	double* number;
 	number = (double*)malloc(sizeof(double));
-	*number = M_PI;
+	*number = M_PI ;
 	printf("Wartosc: %lf, Adres: 0x%p\n", *number, number);
 	free(number);
 	return 0;
 }
+

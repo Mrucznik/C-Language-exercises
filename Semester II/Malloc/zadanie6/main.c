@@ -9,7 +9,7 @@ void wyswietl(const int* ptr, int N)
 
 int* kopia(const int* ptr, int N)
 {
-	int *tab = (int*)malloc(sizeof(int)*N);
+	int* tab = (int*)malloc(sizeof(int) * N);
 	for (int i = 0; i < N; i++)
 		tab[i] = ptr[i];
 	return tab;
@@ -17,8 +17,8 @@ int* kopia(const int* ptr, int N)
 
 int main(void)
 {
-	int a[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int *b;
+	int a[] = {1,2,3,4,5,6,7,8,9,10};
+	int* b;
 	b = kopia(a, 10);
 	puts("Tablica A:");
 	wyswietl(a, 10);
@@ -27,3 +27,4 @@ int main(void)
 	free(b);
 	return 0;
 }
+
