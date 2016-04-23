@@ -1,0 +1,1 @@
+4. Zaalokuj pamiêæ dla liczby typu double. Do zaalokowanej pamiêci zapisz liczbe PI. Wyœwietla wartoœæ tej pamiêci (zaalokowanej zmiennej) oraz jej adres.
