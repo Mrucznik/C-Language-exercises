@@ -1,0 +1,3 @@
+ZAD 1.
+Zaproponuj strukturê opisuj¹c¹ kilka figur geometrycznych. Napisz kod do alokacji pamiêci tak, aby funkcja alokuj¹ca pamiêc wype³niania strukturê.
+Napisz funkcjê, która potrafi wyœwietliæ zawartoœæ struktury w sposób spersonalizowany.
