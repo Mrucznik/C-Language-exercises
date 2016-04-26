@@ -1,0 +1,3 @@
+ZAD 2.
+Utwórz tablicê figur geometrycznych z zadania 1 (10 sztuk) i zapisz j¹ na dysk do pliku binarnego. Nastêpnie wczytaj ten plik z dysku i wyœwietl jego zawartoœæ,
+równie¿ w sposób spersonalizowany.

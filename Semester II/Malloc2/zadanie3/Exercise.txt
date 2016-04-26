@@ -1,0 +1,1 @@
+ZAD 3. Funkcje alokuj¹ce i wype³niaj¹ce strukturê figury geometrycznej nale¿y umieœcic w pliku funkcje_geom.cpp a wywolanie (funkcjê main) w pliku main.cpp.
