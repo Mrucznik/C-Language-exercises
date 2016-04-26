@@ -25,6 +25,26 @@ typedef struct fgeom_t
 	float R;
 } fgeom_t;
 
+fgeom_t* generuj_trojkat(float x1, float y1, float x2, float y2, float x3, float y3, int *err)
+{
+	if (err != NULL)
+		*err = 0;
+
+	fgeom_t *fig = (fgeom_t*)malloc(sizeof(fgeom_t));
+
+	ERR(fig == NULL, 4);
+
+	fig->typ = odcinek;
+	fig->p1.x = x1;
+	fig->p1.y = y1;
+	fig->p2.x = x2;
+	fig->p2.y = y2;
+	fig->p3.x = x3;
+	fig->p4.y = y3;
+
+	return fig;
+}
+
 fgeom_t* generuj_kolo(float x, float y, float r, int* err)
 {
 	if (err != NULL)
@@ -45,28 +65,42 @@ fgeom_t* generuj_kolo(float x, float y, float r, int* err)
 	return fig;
 }
 
-fgeom_t* generuj_kwadrat(float x, float y, float bok, int *err)
+fgeom_t* generuj_kwadrat(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, int *err)
 {
 	if (err != NULL)
 		*err = 0;
-
-	ERR(bok < 0, 1);
-	ERR(x < 0 || x > 100, 2);
-	ERR(y < 0 || y > 100, 3);
 
 	fgeom_t *fig = (fgeom_t*)malloc(sizeof(fgeom_t));
 
 	ERR(fig == NULL, 4);
 
 	fig->typ = kwadrat;
-	fig->p1.x = x;
-	fig->p1.y = y;
-	fig->p2.x = x + bok;
-	fig->p2.y = y;
-	fig->p3.x = x ;
-	fig->p3.y = y + bok;
-	fig->p4.x = x + bok;
-	fig->p4.y = y + bok;
+	fig->p1.x = x1;
+	fig->p1.y = y1;
+	fig->p2.x = x2;
+	fig->p2.y = y2;
+	fig->p3.x = x3;
+	fig->p3.y = y3;
+	fig->p4.x = x4;
+	fig->p4.y = y4;
+
+	return fig;
+}
+
+fgeom_t* generuj_odcin(float x1, float y1, float x2, float y2, int *err)
+{
+	if (err != NULL)
+		*err = 0;
+
+	fgeom_t *fig = (fgeom_t*)malloc(sizeof(fgeom_t));
+
+	ERR(fig == NULL, 4);
+
+	fig->typ = odcinek;
+	fig->p1.x = x1;
+	fig->p1.y = y1;
+	fig->p2.x = x2;
+	fig->p2.y = y2;
 
 	return fig;
 }
@@ -100,7 +134,7 @@ int main()
 	wyswietl_figure(*fig);
 	free(fig);
 
-	fig = generuj_kwadrat(10.0f, 20.0f, 30.0f, NULL);
+	fig = generuj_kwadrat(10.0f, 20.0f, 20.0f, 20.0f, 10.0f, 10.0f, 20.0f, 10.0f, NULL);
 	wyswietl_figure(*fig);
 	free(fig);
 	return 0;

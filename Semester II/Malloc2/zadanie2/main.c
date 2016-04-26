@@ -39,6 +39,8 @@ fgeom_t* generuj_trojkat(float x1, float y1, float x2, float y2, float x3, float
 	fig->p1.y = y1;
 	fig->p2.x = x2;
 	fig->p2.y = y2;
+	fig->p3.x = x3;
+	fig->p4.y = y3;
 
 	return fig;
 }
@@ -63,7 +65,7 @@ fgeom_t* generuj_kolo(float x, float y, float r, int* err)
 	return fig;
 }
 
-fgeom_t* generuj_kwadrat(float x1, float y1, float x2, float y2, int *err)
+fgeom_t* generuj_kwadrat(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4,  int *err)
 {
 	if (err != NULL)
 		*err = 0;
@@ -77,6 +79,10 @@ fgeom_t* generuj_kwadrat(float x1, float y1, float x2, float y2, int *err)
 	fig->p1.y = y1;
 	fig->p2.x = x2;
 	fig->p2.y = y2;
+	fig->p3.x = x3;
+	fig->p3.y = y3;
+	fig->p4.x = x4;
+	fig->p4.y = y4;
 
 	return fig;
 }
