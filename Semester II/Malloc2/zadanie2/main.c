@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <time.h>
 
 #define ERR(__warunek, __errcode) { if(__warunek) { if(err != NULL) *err = __errcode; return NULL; } }
 
@@ -124,10 +125,73 @@ void wyswietl_figure(fgeom_t fig)
 	}
 }
 
+void zapisz_figure(fgeom_t **fig, int ile)
+{
+	FILE* f = fopen("file.dat", "wb");
+	if (f == NULL)
+	{
+		printf("Nie uda³o siê otworzyæ pliku file.dat!");
+		exit(1);
+	}
+
+	fwrite(*fig, sizeof(fgeom_t), ile, f);
+
+	fclose(f);
+}
+
+void wczytaj_figure(fgeom_t **fig, int ile)
+{
+	FILE* f = fopen("file.dat", "wb");
+	if (f == NULL)
+	{
+		printf("Nie uda³o siê otworzyæ pliku file.dat!");
+		exit(1);
+	}
+
+	fread(fig, sizeof(fgeom_t), ile, f);
+
+	fclose(f);
+}
+
 int main()
 {
 	setlocale(LC_ALL, "");
+	srand(time(NULL));
 
+	fgeom_t* figura[10];
+
+	for (int i = 0; i < 10; i++)
+	{
+		switch(rand()%4)
+		{
+		case trojkat:
+			figura[i] = generuj_trojkat(rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100, NULL);
+			break;
+		case kolo:
+			figura[i] = generuj_kolo(rand() % 100, rand() % 100, rand() % 10, NULL);
+			break;
+		case kwadrat:
+			figura[i] = generuj_kwadrat(rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100, NULL);
+			break;
+		case odcinek:
+			figura[i] = generuj_odcin(rand() % 100, rand() % 100, rand() % 100, rand() % 100, NULL);
+			break;
+		}
+
+		if(figura[i] == NULL)
+		{
+			printf("ERROR! Nie uda³o siê stworzyæ figury!");
+			return 1;
+		}
+	}
+
+	zapisz_figure(figura, 10);
+	wczytaj_figure(figura, 10);
+
+	for (int i = 0; i < 10; i++)
+	{
+		wyswietl_figure(*figura[i]);
+	}
 
 	return 0;
 }
