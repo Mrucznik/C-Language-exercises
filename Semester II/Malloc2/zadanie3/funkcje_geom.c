@@ -4,12 +4,12 @@
 #include <stdio.h>
 
 
-fgeom_t* generuj_trojkat(float x1, float y1, float x2, float y2, float x3, float y3, int *err)
+fgeom_t* generuj_trojkat(float x1, float y1, float x2, float y2, float x3, float y3, int* err)
 {
 	if (err != NULL)
 		*err = 0;
 
-	fgeom_t *fig = (fgeom_t*)malloc(sizeof(fgeom_t));
+	fgeom_t* fig = (fgeom_t*)malloc(sizeof(fgeom_t));
 
 	ERR(fig == NULL, 4);
 
@@ -32,7 +32,7 @@ fgeom_t* generuj_kolo(float x, float y, float r, int* err)
 	ERR(x < 0 || x > 100, 2);
 	ERR(y < 0 || y > 100, 3);
 
-	fgeom_t *fig = (fgeom_t*)malloc(sizeof(fgeom_t));
+	fgeom_t* fig = (fgeom_t*)malloc(sizeof(fgeom_t));
 
 	ERR(fig == NULL, 4);
 
@@ -44,12 +44,12 @@ fgeom_t* generuj_kolo(float x, float y, float r, int* err)
 	return fig;
 }
 
-fgeom_t* generuj_kwadrat(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, int *err)
+fgeom_t* generuj_kwadrat(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, int* err)
 {
 	if (err != NULL)
 		*err = 0;
 
-	fgeom_t *fig = (fgeom_t*)malloc(sizeof(fgeom_t));
+	fgeom_t* fig = (fgeom_t*)malloc(sizeof(fgeom_t));
 
 	ERR(fig == NULL, 4);
 
@@ -66,12 +66,12 @@ fgeom_t* generuj_kwadrat(float x1, float y1, float x2, float y2, float x3, float
 	return fig;
 }
 
-fgeom_t* generuj_odcin(float x1, float y1, float x2, float y2, int *err)
+fgeom_t* generuj_odcin(float x1, float y1, float x2, float y2, int* err)
 {
 	if (err != NULL)
 		*err = 0;
 
-	fgeom_t *fig = (fgeom_t*)malloc(sizeof(fgeom_t));
+	fgeom_t* fig = (fgeom_t*)malloc(sizeof(fgeom_t));
 
 	ERR(fig == NULL, 4);
 
@@ -103,7 +103,7 @@ void wyswietl_figure(fgeom_t fig)
 	}
 }
 
-void zapisz_figure(fgeom_t **fig, int ile)
+void zapisz_figure(fgeom_t** fig, int ile)
 {
 	FILE* f = fopen("file.dat", "wb");
 	if (f == NULL)
@@ -117,7 +117,7 @@ void zapisz_figure(fgeom_t **fig, int ile)
 	fclose(f);
 }
 
-void wczytaj_figure(fgeom_t **fig, int ile)
+void wczytaj_figure(fgeom_t** fig, int ile)
 {
 	FILE* f = fopen("file.dat", "wb");
 	if (f == NULL)
@@ -130,3 +130,4 @@ void wczytaj_figure(fgeom_t **fig, int ile)
 
 	fclose(f);
 }
+
