@@ -1,0 +1,3 @@
+ZAD 1.
+Zaprojektuj uniê, która pozwala rozbiæ liczbe typu int tak, aby mo¿liwe by³o wyœwietlenie wszystkich bajtów sk³adowych.
+Dla liczby int o wartoœci 0x41424344 wyœwietl wartoœci bajtów oraz wyjaœnij, jaki maj¹ one sens i jak powstaje z nich wartoœæ 1094861636. 

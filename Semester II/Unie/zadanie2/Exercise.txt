@@ -1,0 +1,2 @@
+ZAD 2.
+Rozszerz zadanie 1 tak, aby wyœwietlaæ starsze i m³odsze s³owo z liczby typu int. Jaki typ bêdzie poprawnie reprezentowa³ s³owo? Czym jest s³owo?
