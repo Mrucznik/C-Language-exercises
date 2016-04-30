@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//S³owo to dwa bajty, wiêc poprawnie bêdzie je reprezentowa³ typ short który w³aœnie tyle bajtów przyjmuje.
+
 int main()
 {
 	union intbyteword
