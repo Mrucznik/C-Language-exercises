@@ -13,7 +13,7 @@ int main()
 
 	fscanf(f, "%d", &ile);
 
-	while (!feof(f))
+	for (int i = 0; i < ile; i++)
 	{
 		int liczba;
 		fscanf(f, "%d\t", &liczba);
