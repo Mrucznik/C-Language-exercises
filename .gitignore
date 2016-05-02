@@ -241,5 +241,5 @@ _Pvt_Extensions
 *.rar
 
 #My
-*.db
-*.VC.db
+.db
+.VC.db
