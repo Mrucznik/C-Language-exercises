@@ -1,0 +1,4 @@
+ZAD9. Napisz funkcjê, która po³¹czy 3 oddzielne napisy:
+char razem[100];
+laczenie(razem, "ala", "ma", "kota");
+tak, ¿e w zmiennej razem znajdzie siê napis: "ala ma kota";

@@ -1,0 +1,1 @@
+ZAD2: Zak³adaj¹c, ¿e ci¹gi znaków w jezyku C zapisane s¹ w formacjie ASCIIZ, napisz program wyznaczaj¹cy d³ugoœæ tekstu.

@@ -1,0 +1,1 @@
+ZAD10. Napisz funkcjê, która zast¹pi spacje w tekœcie znakiem "_". Tekst Ÿród³owy ma byæ przekazywany do funkcji jako jeden z parametrów.

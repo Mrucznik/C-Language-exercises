@@ -1,0 +1,1 @@
+ZAD4: Dana jest tablica typu char: const char* tekst = "Ala ma kota". Wykorzystujπc wskaünik na znak (char), wyúwietl pierwsze s≥owo tekstu (do spacji, bez spacji).

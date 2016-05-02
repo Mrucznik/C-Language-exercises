@@ -1,0 +1,1 @@
+ZAD3: Napisz funkcjê licz¹c¹ wielkie litery, ma³e litery oraz spacje w tekœcie t1. Wyniki (trzy wartoœci) powinny byæ zwracane przez funkcjê poprzez wskaŸniki do zmiennych docelowych, przekazywanych w liœcie parametrów wywo³ania funkcji.

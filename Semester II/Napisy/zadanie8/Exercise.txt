@@ -1,0 +1,1 @@
+ZAD8: Napisz funkcjê, tworzy kopiê tekstu t1, zmieniaj¹c znaki ma³e na du¿e a du¿e na ma³e.

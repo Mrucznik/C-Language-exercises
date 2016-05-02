@@ -1,0 +1,5 @@
+========================= Teksty, napisy
+Dany jest tekst:
+	const char* t1 = "Ala Ma Kota a kot Ma AlE";
+	
+ZAD1: Wyœwietl tekst na ekranie bez u¿ywania funkcji printf/puts. PodpowiedŸ: jaka inna funkcja pozwala wyœwietlaæ znaki na ekranie?
