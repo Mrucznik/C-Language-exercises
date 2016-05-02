@@ -239,3 +239,7 @@ _Pvt_Extensions
 *.zip
 *.7z
 *.rar
+
+#My
+*.db
+*.VC.db
