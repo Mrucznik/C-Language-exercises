@@ -1,0 +1,1 @@
+Napisz program, który tworzy pusty plik1.txt. Jeœli taki plik istnieje, program ma wyœwietlaæ komunikat "Plik ju¿ istnieje" oraz nie mo¿e modyfikowaæ jego zawartoœci.

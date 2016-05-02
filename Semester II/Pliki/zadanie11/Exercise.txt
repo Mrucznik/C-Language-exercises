@@ -1,0 +1,1 @@
+Napisz program kopiuj¹cy pliki, wykorzystuj¹c funkcje fread/fwrite. Nazwy plików podawane s¹ przez u¿ytkownika z klawiatury. W przypadku braku pliku Ÿród³owego lub istnienia pliku docelowego, program ma wyœwietlaæ stosowny komunikat o b³êdzie.
