@@ -1,0 +1,16 @@
+Dana jest nastêpuj¹ca tablica:
+uint8_t bmp[] = {
+		0xfc, 0x00, 0x00, 0x10, 0x30,
+		0xb4, 0x00, 0x00, 0x30, 0x78,
+		0x30, 0x78, 0x7c, 0x7c, 0x78,
+		0x30, 0xcc, 0xc0, 0x30, 0x30,
+		0x30, 0xfc, 0x78, 0x30, 0x30,
+		0x30, 0xc0, 0x0c, 0x34, 0x00,
+		0x78, 0x78, 0xf8, 0x18, 0x30,
+		0x00, 0x00, 0x00, 0x00, 0x00
+		};
+Jest to obraz monochromatyczny (dwukolorowy), zapisany wiersz po wierszu. Liczba wierszy wynosi 8, liczba kolumn 40. Zak³adaj¹c, ¿e jeden piksel (punkt obrazu) zakodowany jest na jednym bicie, liczba bajtów w wierszu wynosi 5 (40 kolumn / 8 bitów).
+1.	Wyœwietl obraz w konsoli zak³adaj¹c, ze bit ustawiony to '#' a bit wyzerowany to ' '. Pamiêtaj o znaku nowej linii '\n' na koñcu wyœwietlanego wiersz. Co przedstawia obraz?
+2.	Wygenerowany obraz zapisz do pliku tekstowe plik18a.txt w takiej formie, jak widzisz na ekranie.
+
+

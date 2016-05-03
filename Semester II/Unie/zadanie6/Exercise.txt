@@ -1,0 +1,8 @@
+Dla podanej przez u¿ytkownika liczby ca³kowitej, wyœwietl jej reprezentacjê w postaci:
+•	1 liczby 32 bitowej
+•	2 liczb 16 bitowych
+•	4 liczb 8 bitowych
+•	8 liczb 4 bitowych
+•	16 liczb 2 bitowych
+•	32 liczb jednobitowych
+PodpowiedŸ: stosuj unie, struktury i pola bitowe.
