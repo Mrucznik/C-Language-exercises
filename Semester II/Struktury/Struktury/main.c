@@ -11,9 +11,9 @@ typedef struct Student student_t;
 void wpisz_dane(student_t *rekord)
 {
 	printf("Podaj imie studenta: ");
-	scanf("%s[32]", &rekord->imie);
+	scanf("%s[32]", rekord->imie);
 	printf("Podaj nazwisko studenta: ");
-	scanf("%s[32]", &rekord->nazwisko);
+	scanf("%s[32]", rekord->nazwisko);
 	printf("Podaj nr indexu studenta: ");
 	scanf("%d", &rekord->index);
 }
@@ -48,8 +48,8 @@ void wczytaj_dane_t(const char* plik, student_t* rekord)
 		return;
 	}
 
-	fscanf(f, "%s[32]", &rekord->imie);
-	fscanf(f, "%s[32]", &rekord->nazwisko);
+	fscanf(f, "%s[32]", rekord->imie);
+	fscanf(f, "%s[32]", rekord->nazwisko);
 	fscanf(f, "%d", &rekord->index);
 
 	fclose(f);
