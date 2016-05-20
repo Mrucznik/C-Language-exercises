@@ -1,0 +1,2 @@
+Napisz program, który za pomoc¹ rekurencji wyœwietli podan¹ liczbê ca³kowit¹ w postaci ci¹gu kolejnych cyfr, w systemie: dwójkowym, czwórkowym, ósemkowym, dziesiêtnym, szesnastkowym oraz innym, zaproponowanym przez siebie.
+
