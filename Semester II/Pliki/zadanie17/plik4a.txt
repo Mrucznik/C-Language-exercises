@@ -1,0 +1,8 @@
+
+gere
+erger
+regreg
+redg
+ewf
+Wykonaj kopiowanie w sposób podobny do tego z zadania 4, jednak linie zapisz do pliku plik4a.txt w odwrotnej  kolejnoœci. Dzia³anie programu przetestuj na dowolnym, utworzonym przez siebie, pliku tekstowym.
+kox
