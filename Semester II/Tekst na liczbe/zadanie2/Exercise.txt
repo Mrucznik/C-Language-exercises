@@ -1,0 +1,2 @@
+Napisz program, który wczytuje s³owa z dowolnego (zaproponowanego przez siebie) pliku tekstowego, wyszukuje w nim liczby i wyznacza ich sumê. Plik tekstowy za³¹cz jako komentarz /* */ pod zadaniem.
+

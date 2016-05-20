@@ -1,0 +1,2 @@
+Napisz program, który pobiera od u¿ytkownika liczby. Liczby te maj¹ byæ sumowane a wynik wyœwietlany na ekranie, ju¿ podczas wprowadzania. Jeœli u¿ytkownik wpisze niepoprawny tekst (np. 123asdf) to program ma wyœwietliæ informacjê o b³êdzie a wartoœæ zignorowaæ. Praca programu koñczy siê w momencie wpisania s³owa "koniec".
+
