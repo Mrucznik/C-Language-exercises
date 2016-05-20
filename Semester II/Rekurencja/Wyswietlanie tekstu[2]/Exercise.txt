@@ -1,0 +1,2 @@
+Napisz program, który za pomoc¹ rekurencji wyœwietli na ekranie tekst podany w parametrze. Do wyœwietlania mo¿na u¿ywaæ putc lub printf("%c").
+
