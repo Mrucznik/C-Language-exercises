@@ -29,7 +29,15 @@ unsigned int strlen(const char* str)
 	return i;
 }
 
-int main(void)
+void main() 
 {
+	char napis1[] = "Testowy napis";
+	char napis2[] = " drugi napis";
+	char skopiowany[20];
+	printf("Dlugosc napisu \"%s\": %d\n", napis1, strlen(napis1));
+	strcat(napis1, napis2);
+	printf("strcat(napis1, napis2), napis1 = %s\n", napis1);
+	strcpy(skopiowany, napis2);
+	printf("strcpy(skopiowany, napis2); skopiowany = %s\n", skopiowany);
 	return 0;
 }
