@@ -1,0 +1,12 @@
+Dany jest zbiór wartoœci: int[] T = { 1, 2, 3, 4 };
+Za pomoc¹ rekurencji wyznacz, policz i wyœwietl wszystkie mo¿liwe kombinacje elementów z T, bez powtórzeñ. Przyk³ad dla T:
+1234	2134	3214	4231
+1243	2143	3241	4213
+1324	2314	3124	4321
+1342	2341	3142	4312
+1423	2413	3421	4123
+1432	2431	3412	4132
+
+Jeœli tablica T bêdzie zawiera³a elementy 1-9, to ile ro¿nych kombinacji jest mo¿liwych?
+					
+
