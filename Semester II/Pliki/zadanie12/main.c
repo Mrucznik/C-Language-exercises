@@ -18,22 +18,18 @@ int main(void)
 
 	printf("Podaj nazwe pliku kopiowanego: ");
 	scanf("%s[64]", filename);
-	otworzPlik(&f1, filename, "r");
+	otworzPlik(&f1, filename, "rb");
 
 	printf("Podaj nazwe pliku docelowego: ");
 	scanf("%s[64]", filename);
-	otworzPlik(&f2, filename, "w");
+	otworzPlik(&f2, filename, "wb");
 
-	int i = 0;
-	while (1)
+	fseek(f1, 0, SEEK_END);
+	while (ftell(f1) != 0)
 	{
-		fseek(f1, (i -= 1), SEEK_END);
-		if(ftell(f1) == 0)
-		{
-			fputc(fgetc(f1), f2);
-			break;
-		}
-		fputc(fgetc(f1), f2);//nie mo¿na daæ przed warunkiem wyjœcia z pêtli bo zmienia pozycjê wskaŸnika pliku
+		fseek(f1, -1, SEEK_CUR);
+		fputc(fgetc(f1), f2);
+		fseek(f1, -1, SEEK_CUR);
 	}
 
 	fclose(f1);
