@@ -1,0 +1,5 @@
+Napisz program, który wyœwietla trzy liczby typu int za pomoc¹ funkcji o prototypie:
+void show(int dummy, ...);
+Argument dummy nale¿y pomin¹æ (nie wyœwietlaæ).
+Co siê stanie, gdy tak¹ funkcjê wywo³aæ bez dodatkowych parametrów? Opisz efekt i podaj mo¿liwe wyniki.
+
