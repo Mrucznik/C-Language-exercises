@@ -1,0 +1,1 @@
+Napisz program który pobiera od u¿ytkownika liniê tekstu a nastêpnie dodaje ja na koñcu pliku plik5.txt. Jeœli plik nie istnieje, program musi go utworzyæ.
