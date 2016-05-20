@@ -1,0 +1,4 @@
+Imie: Jan
+Nazwisko: Kowalski
+Data urodzenia: 26 wrzesieñ 1980
+P³eæ: Mê¿czyzna
