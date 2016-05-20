@@ -1,0 +1,10 @@
+Zapoznaj siê z podstawowymi operacjami na liczbach zespolonych a nastêpnie zaproponuj strukturê zesp_t, przechowuj¹c¹ liczbê zespolon¹. Napisz nastêpuj¹ce funkcje:
+zesp_t* lz(double rzeczywista, double urojona);
+void ustaw(zesp_t* liczba, double rzeczywista, double urojona);
+void wyswietl(zesp_t* liczba);
+void dodaj(zesp_t* a, zesp_t* b, zesp_t* wynik);
+void odejmij(zesp_t* a, zesp_t* b, zesp_t* wynik);
+void pomnoz(zesp_t* a, zesp_t* b, zesp_t* wynik);
+double modul(zesp_t* liczba);
+double argument(zesp_t* liczba);
+Ka¿da z funkcji musi sprawdzaæ, czy przekazywany parametr wskaŸnikowy posiada wartoœæ NULL. Zaproponuj operacjê matematyczn¹ z wykorzystaniem w/w funkcji, a nastêpnie wyœwietl oraz sprawdŸ uzyskane wyniki.
