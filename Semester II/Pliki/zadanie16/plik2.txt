@@ -1,2 +1,3 @@
-Kopiuj plik w trybie binarnym, zapisujπc dane w odwrotnej kolejnoúci. 
-Podpowiedü: fseek/ftell
+testowe
+dane do 
+skopiowania

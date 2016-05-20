@@ -1,0 +1,1 @@
+Napisz program, który otwiera plik plik2.txt w trybie tekstowym a nastêpnie kopiuje jego zawartoœæ do pliku plik4.txt

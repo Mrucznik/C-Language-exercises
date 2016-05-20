@@ -1,2 +1,0 @@
-Kopiuj plik w trybie binarnym, zapisuj¹c dane w odwrotnej kolejnoœci. 
-PodpowiedŸ: fseek/ftellÿ
