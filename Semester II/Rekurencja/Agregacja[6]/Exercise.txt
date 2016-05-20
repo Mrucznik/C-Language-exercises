@@ -1,0 +1,4 @@
+Dana jest tablica N dowolnych liczb, zaproponowanych przez studenta. Napisz program, który za pomoc¹ rekurencji wyznaczy wartoœæ zagregowan¹ takiej tablicy.
+Agregata ma byæ wyznaczana za pomoc¹ funkcji agreguj¹cej, której wskaŸnik przekazywany jest do funkcji rekurencyjnej przy pierwszym uruchomieniu. Przyk³adem funkcji agreguj¹cej jest iloczyn z poprzedniego zadania. Zatem zadanie to jest rozszerzeniem poprzedniego, o wskaŸniki na funkcjê operacji matematycznej.
+Zaproponuj prototyp funkcji agreguj¹cej. Dla operacji dodawania, odejmowania, iloczynu i ilorazu otrzymaj wyniki zgodne z poprzednim zadaniem.
+
