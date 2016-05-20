@@ -1,0 +1,9 @@
+1.	Utwórz strukturê kontakt_t zawierajac¹ pola typu imie, nazwisko, nr_telefonu, rok_urodzenia. Zaproponuj typy danych w tej strukturze. Utwórz dwie zmienne tej struktury i wype³nij je dowolnymi danymi.
+2.	Utworz strukturê data_t, zawieraja¹c¹ dzien, miesiac i rok. Zast¹p rok_urodzenia w strukturze kontakt_t polem data_t o nazwie data_urodzenia. Nowe struktury uzupe³nij danymi.
+3.	Napisz program wyœwietlaj¹cy zawartoœæ struktury kontakt_t na ekranie w formie:
+Imiê: Jan
+Nazwisko: Kowalski
+Data urodzenia: 26 wrzesieñ 1980
+4.	Nazwê miesi¹ca w dacie urodzenia wyœwietl, wykorzystuj¹c tablicê wskaŸników na napisy (nazwy miesi¹ca).
+5.	Rozbuduj kontakt_t pole typu wyliczeniowego plec_t. Zaproponuj nazwy oraz odpowiadaj¹ce im wartoœci numeryczne.  Uzupe³nij zawartoœci tych pól dowolnymi danymi. Wyœwietlaj¹c informacjê o p³ci, wykorzystaj operator potrójny (a?b:c)
+

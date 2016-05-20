@@ -1,0 +1,1 @@
+Strukture kontakt_t z zadania "Struktura kontakt_t"  zapisz do pliku tekstowego plik12.txt oraz do pliku binarnego plik12.bin
