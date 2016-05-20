@@ -1,0 +1,3 @@
+Napisz program wczytuj¹cy plik19.bin (zadanie Podwójny wskaŸnik - zapis danych). Program ma pobieraæ liczbê elementów z pliku oraz alkowaæ pamiêæ na tej podstawie. Wykorzystaj funkcjê:
+double wyznacz_srednia(int** tablica, int N);  // N - liczba elementów w tablicy
+Czy wyznaczona œrednia i œrednia z zadania "Podwójny wskaŸnik - zapis danych" zgadza siê? Po wyznaczeniu œredniej zwolnij pamiêæ.
