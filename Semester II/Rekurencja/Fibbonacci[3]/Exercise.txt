@@ -1,0 +1,1 @@
+Napisz program, który za pomoc¹ rekurencji wyznaczy wartoœæ ci¹gu Fibonacciego. Uzyskane wartoœci wykorzystaj, wyznaczaj¹c ich sumy dla od 5 do 25 pierwszych wartoœci ci¹gu. Wyniki wyœwietl na ekranie (w sumie 21 wartoœci). Sumowanie wykonaj równie¿ rekurencyjnie.
