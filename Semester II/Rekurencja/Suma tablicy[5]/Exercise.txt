@@ -1,0 +1,3 @@
+Dana jest tablica N dowolnych liczb, zaproponowanych przez siebie. Napisz program, który za pomoc¹ rekurencji wyznaczy sumê wartoœci z tablicy.
+Podobn¹ operacjê przeprowadŸ dla ró¿nicy, iloczynu i ilorazu.
+
