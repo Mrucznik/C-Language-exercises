@@ -1,0 +1,2 @@
+Napisz kilka wersji makr wyznaczaj¹cych wartoœæ minimaln¹ oraz maksymaln¹ przekazywanych wyra¿eñ. Wersje te maj¹ przyjmowaæ 2, 3, 4, 5, oraz 6 argumentów.
+W sumie 10 makr.

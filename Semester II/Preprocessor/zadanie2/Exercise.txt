@@ -1,0 +1,3 @@
+Napisz program, który wykorzystuj¹c funkcjê wyœwietlaj¹c¹ napisy oraz dyrektywy preprocesora, wyœwietli nazwê pliku Ÿród³owego oraz wykonywan¹ liniê.
+Wyœwietl równie¿ datê oraz czas kompilacji.
+

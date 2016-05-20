@@ -1,0 +1,4 @@
+Napisz makro o zasadzie dzia³ania zgodnej z assert() - sprawdzaj¹ce prawdziwoœæ wyra¿enia. Makro ma przyjmowaæ wyra¿enie i je ewaluowaæ. Jeœli wyra¿enie jest prawdziwe, to makro ma nie podejmowaæ ¿adnych czynnoœci. Jeœli wyra¿enie nie jest prawdziwe, marko ma: wyœwietliæ komunikat o bêdzie (równie¿ przekazany w argumencie wywo³ania), nazwê pliku Ÿród³owego oraz liniê kodu, w której wyst¹pi³ b³¹d a nastêpnie zakoñczyæ program.
+Wykorzystuj¹c to makro, napisz program tworz¹cy 10 plików o dowolnych nazwach. Tworzenie pliku zawrzyj w funkcji przyjmuj¹cej jego nazwê i zwracaj¹cej wartoœæ logiczn¹ wyniku.
+Wynik tworzenia pliku oceñ za pomoc¹ opracowanego makra.
+
