@@ -1,0 +1,1 @@
+Przed wyœwietleniem, zamieñ wszystkie litery ma³e na du¿e: a-z -> A-Z
