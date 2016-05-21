@@ -1,0 +1,2 @@
+Napisz i przetestuj funkcjê wyznaczaj¹c¹ wartoœæ wielomianu w punkcie X. Stopieñ wielomianu oraz wagi jego wyrazów nale¿y podaæ w parametrze.
+
