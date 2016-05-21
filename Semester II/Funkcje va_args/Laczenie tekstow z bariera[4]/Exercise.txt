@@ -1,0 +1,2 @@
+Napisz i przetestuj funkcjê, która ³¹czy N tekstów do wspólnego bufora. Bufor ma byæ alokowany wewn¹trz funkcji i zwracany przez ni¹, wraz z tekstami. Pamiêtaj o zwalnianiu pamiêci przed koñcem programu.
+
