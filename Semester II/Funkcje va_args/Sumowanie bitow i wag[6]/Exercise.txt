@@ -1,0 +1,9 @@
+Napisz i przetestuj funkcjê wyznaczaj¹c¹ wartoœæ numeryczn¹ (reprezentacjê dziesiêtn¹) dla wartoœci bitów podanych w parametrach. Pierwszy parametr zawiera liczbê bitów.
+suma_bitow(1, 0) = 0
+suma_bitow(1, 1) = 1
+suma_bitow(3, 0,1,0) = 2
+suma_bitow(3, 1,1,1) = 7
+suma_bitow(8, 0,0,0,0,0,0,0,1) = 1
+suma_bitow(8, 1,0,0,0,0,0,0,1) = 129
+suma_bitow(32, 1,1,0,1,0,0,0,1,  0,0,0,0,1,1,0,1,  0,1,0,0,1,0,1,1,   1,1,1,0,1,1,1,0) = 3,507,309,550
+
