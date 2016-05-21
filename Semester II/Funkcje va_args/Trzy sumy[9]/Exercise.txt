@@ -1,0 +1,2 @@
+Napisz i przetestuj trzy funkcje, które wyznaczaj¹ sumê N liczb: ca³kowitych (int), zmiennoprzecinkowych (float i double). Ka¿d¹ z funkcji wywo³aj dwa razy: pierwszy raz podaj¹c w parametrach odpowiednie zmienne (np. suma(3,a,b,c)) a drugi raz podaj¹c bezpoœrednio wartoœci, np. suma(3,10,20,30). Popraw program tak, aby wyœwietla³ poprawne wyniki. Wyjaœnij zaistnia³e problemy.
+
