@@ -1,0 +1,2 @@
+Napisz i przetestuj funkcjê licz¹c¹ sumê oraz iloczyn N liczb ca³kowitych, przekazanych w dodatkowych parametrach.
+

@@ -1,0 +1,2 @@
+Napisz i przetestuj funkcjê ³¹cz¹c¹ N tekstów do wspólnego bufora. Funkcja ma przyjmowaæ w parametrze: bufor tekstowy, liczbê tekstów oraz kolejne teksty.
+
