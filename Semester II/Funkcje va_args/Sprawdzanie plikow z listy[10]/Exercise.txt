@@ -1,0 +1,2 @@
+Napisz funkcjê, która w parametrze przyjmuje listê plików i sprawdza czy istniej¹. Jeœli dany plik istnieje, funkcja ma wyœwietliæ jego nazwê i d³ugoœæ. Jeœli nie istnieje - informacje o tym.
+
