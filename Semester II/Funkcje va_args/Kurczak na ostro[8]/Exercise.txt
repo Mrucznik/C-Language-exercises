@@ -1,0 +1,4 @@
+Napisz i przetestuj funkcjê, która przygotuje: zaalokuje i uzupe³ni strukturê realizuj¹c¹ wielomian (np. polynomial_t). Ponadto dodaj funkcjê, wyznaczaj¹c¹ wartoœæ wielomianu w punkcie X o nastêpuj¹cym prototypie:
+double poly_calc(polynomial_t *poly, double x);
+Przetestuj program dla dowolnych wartoœci X i wag wielomianów 2, 3, 5 oraz 50 stopnia.  Pamiêtaj o zwalnianiu pamiêci przed koñcem programu.
+
