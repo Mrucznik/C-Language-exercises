@@ -1,0 +1,12 @@
+Dane s¹ nazwy miast:
+£ochów		Czerniejewo		Lubomierz	Be³chatów	£osice	Lublin	Kutno
+Lubliniec	Lubniewice		Czerwionka-Leszczyny	Czêstochowa	Lubsko	CzeladŸ
+Czempiñ	Bytom Odrzañski	Bytów	Legionowo	Luboñ	Lubraniec
+Bieruñ		Bierutów	£owicz		£ódŸ	£uków	Cz³uchów	L¹dek-Zdrój
+Bytom	£omianki[u	£om¿a	Czersk	Czerwieñsk	Be³¿yce	Bêdzin	Cz³opa	Lubin
+
+Podobnie --jak w przypadku zadania z sortowaniem liczb, posortuj miasta alfabetycznie. Listê miast wyœwietl przed i po sortowaniu w sposób czytelny. 
+PodpowiedŸ: normalnie do sortowania tekstów u¿ywa siê funkcji strcmp (zapoznaj siê z jej dzia³aniem i przetestuj dla prostych nazw), jednak strcmp nie uwzglêdnia znaków narodowych. Napisz w³asn¹ metodê porównywania, która uwzglêdni to, ¿e 'ê' znajduje siê pomiêdzy 'e' a 'f'.
+Uwaga - w nazwach s¹ polskie znaki. Nale¿y jest uwzglêdniæ przy sortowaniu oraz usuwaæ podczas wyœwietlania. 
+Dla ambitnych: U¿ywaj¹c funkcji WinAPI (np. MultiByteToWideChar i/lub WideCharToMultiByte) zmieñ kodowanie znaków na takie, aby by³o poprawnie wyœwietlane w konsoli.
+

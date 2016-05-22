@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zadanie1", "zadanie1\zadanie1.vcxproj", "{9D56BBEB-50D7-4E79-85BA-6A85A80D5152}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Kalkulator[1]", "Kalkulator[1]\Kalkulator[1].vcxproj", "{9D56BBEB-50D7-4E79-85BA-6A85A80D5152}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Funkcja for[2]", "Funkcja for[2]\Funkcja for[2].vcxproj", "{EDE24743-6351-4614-BA7B-5B3D119A3747}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Przetwarzanie znakow[3]", "Przetwarzanie znakow[3]\Przetwarzanie znakow[3].vcxproj", "{B198C12C-E075-4162-98BA-B352DBBB77E0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sortowanie liczb[4]", "Sortowanie liczb[4]\Sortowanie liczb[4].vcxproj", "{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sortowanie tekstow[5]", "Sortowanie tekstow[5]\Sortowanie tekstow[5].vcxproj", "{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,38 @@ Global
 		{9D56BBEB-50D7-4E79-85BA-6A85A80D5152}.Release|x64.Build.0 = Release|x64
 		{9D56BBEB-50D7-4E79-85BA-6A85A80D5152}.Release|x86.ActiveCfg = Release|Win32
 		{9D56BBEB-50D7-4E79-85BA-6A85A80D5152}.Release|x86.Build.0 = Release|Win32
+		{EDE24743-6351-4614-BA7B-5B3D119A3747}.Debug|x64.ActiveCfg = Debug|x64
+		{EDE24743-6351-4614-BA7B-5B3D119A3747}.Debug|x64.Build.0 = Debug|x64
+		{EDE24743-6351-4614-BA7B-5B3D119A3747}.Debug|x86.ActiveCfg = Debug|Win32
+		{EDE24743-6351-4614-BA7B-5B3D119A3747}.Debug|x86.Build.0 = Debug|Win32
+		{EDE24743-6351-4614-BA7B-5B3D119A3747}.Release|x64.ActiveCfg = Release|x64
+		{EDE24743-6351-4614-BA7B-5B3D119A3747}.Release|x64.Build.0 = Release|x64
+		{EDE24743-6351-4614-BA7B-5B3D119A3747}.Release|x86.ActiveCfg = Release|Win32
+		{EDE24743-6351-4614-BA7B-5B3D119A3747}.Release|x86.Build.0 = Release|Win32
+		{B198C12C-E075-4162-98BA-B352DBBB77E0}.Debug|x64.ActiveCfg = Debug|x64
+		{B198C12C-E075-4162-98BA-B352DBBB77E0}.Debug|x64.Build.0 = Debug|x64
+		{B198C12C-E075-4162-98BA-B352DBBB77E0}.Debug|x86.ActiveCfg = Debug|Win32
+		{B198C12C-E075-4162-98BA-B352DBBB77E0}.Debug|x86.Build.0 = Debug|Win32
+		{B198C12C-E075-4162-98BA-B352DBBB77E0}.Release|x64.ActiveCfg = Release|x64
+		{B198C12C-E075-4162-98BA-B352DBBB77E0}.Release|x64.Build.0 = Release|x64
+		{B198C12C-E075-4162-98BA-B352DBBB77E0}.Release|x86.ActiveCfg = Release|Win32
+		{B198C12C-E075-4162-98BA-B352DBBB77E0}.Release|x86.Build.0 = Release|Win32
+		{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}.Debug|x64.ActiveCfg = Debug|x64
+		{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}.Debug|x64.Build.0 = Debug|x64
+		{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}.Debug|x86.ActiveCfg = Debug|Win32
+		{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}.Debug|x86.Build.0 = Debug|Win32
+		{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}.Release|x64.ActiveCfg = Release|x64
+		{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}.Release|x64.Build.0 = Release|x64
+		{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}.Release|x86.ActiveCfg = Release|Win32
+		{A9CBFDD0-9C28-49EA-BB75-4F8FB7F64350}.Release|x86.Build.0 = Release|Win32
+		{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}.Debug|x64.ActiveCfg = Debug|x64
+		{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}.Debug|x64.Build.0 = Debug|x64
+		{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}.Debug|x86.ActiveCfg = Debug|Win32
+		{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}.Debug|x86.Build.0 = Debug|Win32
+		{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}.Release|x64.ActiveCfg = Release|x64
+		{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}.Release|x64.Build.0 = Release|x64
+		{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}.Release|x86.ActiveCfg = Release|Win32
+		{D9CBE2B7-8143-4D88-941D-6F8B193F1D96}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
