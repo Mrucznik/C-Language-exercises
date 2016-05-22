@@ -1,0 +1,8 @@
+Napisz proceduralny odpowiednik pêtli for. Procedura ta ma przyjmowaæ 4 parametry: Wartoœæ pocz¹tkow¹ iteratora, wartoœæ kroku iteratora, wartoœæ koñcow¹ iteratora oraz wskaŸnik na funkcjê iteratora. Jako typ iteratora przyjmij double. Odpowiednik pêtli for ma wywo³ywaæ funkcjê iteratora w taki sam sposób, jak pêtla for uruchamia swój kod.
+Przetestuj swój program dla wartoœci:
+	start=0, krok = 10, stop= 40
+	start=3, krok = 10, stop= 45
+	start=-20, krok = 1.1, stop= 10
+	start=-50, krok = -3.14, stop= -60
+W testach funkcja iteratora ma wyœwietlaæ wartoœæ argumentu na ekranie (np. 0 10 20 30 40).
+
