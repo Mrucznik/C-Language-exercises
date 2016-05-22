@@ -1,0 +1,3 @@
+Napisz funkcjê, która przetwarza znaki w tekœcie za pomoc¹ funkcji o podanym wskaŸniku. WskaŸnik ma byæ zbudowany na prototypie prototypie char func_name(char ch).
+Wykorzystaj napisan¹ funkcjê przetwarzaj¹c¹ do zamiany znaków ma³ych na du¿e, du¿ych na ma³e oraz spacji na myœlniki w dowolnych, wybranych przez siebie tekstach. Wyniki dla wszystkich operacji wyœwietlaj oddzielnie.
+
