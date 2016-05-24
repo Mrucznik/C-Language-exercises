@@ -1,0 +1,15 @@
+WprowadŸ mo¿liwoœæ podawania zmiennych oraz wywo³ywania funkcji: sqrt, sin, cos. Wyznacz wartoœci nastêpuj¹cych wyra¿eñ:
+	x + 10
+	x * (y - 20)
+	3 * 2 + 10
+	-x + -y
+	-x - -y - -z
+	2 * sin(x) * sin(y)
+	5 * a * a - 5 * b - c
+	sqrt(zmA * zmA - 4 * zmA * zmB)
+	cos(A) + sin(B) - sqrt(C)
+
+Program ma pozwalaæ na wybór wyra¿enia (menu, z klawiatury) do wyznaczenia wartoœci. Po wyborze program ma wyœwietlaæ zapytania o wartoœci zmiennych zawartych w drzewie.
+Uwaga! Jeœli w drzewie jest wykorzystana tylko zmienna x, program musi zapytaæ tylko i wy³¹cznie o ni¹.
+
+
