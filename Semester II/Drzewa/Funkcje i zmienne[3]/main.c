@@ -226,6 +226,6 @@ Wybierz wyra¿enie: ");
 	}
 
 	printf("Wynik operacji: %lf\n", ewaluacja(drzewo));
-
+	zwolnij(drzewo);
 	return 0;
 }
