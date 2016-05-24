@@ -27,17 +27,6 @@ void controlMenu(Menu* menu)
 		{
 			*option = NEXT_RECORD;
 		}
-		else if(*option == EDIT_RECORD)
-		{
-			if (c == KEY_UP)
-			{
-				*option = EDIT_UP;
-			}
-			else if (c == KEY_DOWN)
-			{
-				*option = EDIT_DOWN;
-			}
-		}
 		break;
 	case KEY_PRINT:
 		*option = PRINT_RECORD;
@@ -55,26 +44,43 @@ void controlMenu(Menu* menu)
 		*option = EXIT;
 		break;
 	default:
-		printf("Invaild option!\n");
+		*option = NAVIGATE;
 		break;
 	}
 }
 
 void printMenu(Menu menu, Contact* kontakt)
 {
-	puts  ("ษอออออออออออออออออออออออออออออออออออป");
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY);
-	printf("บ       Aktualny rekord: #%02d        บ\n", menu.record);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
-	printf("บ Imie: %-27s บ\n", kontakt[menu.record].imie);
-	printf("บ Nazwisko: %-23s บ\n", kontakt[menu.record].nazwisko);
-	printf("บ Telefon: %-24d บ\n", kontakt[menu.record].telefon);
-	puts  ("วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤยฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤถ");
-	puts  ("บ E - edytuj      ณ U - usun        บ");
-	puts  ("บ D - dodaj       ณ W - wyswietl    บ");
-	puts  ("บ <- - poprzedni  ณ -> - nastepny   บ");
-	puts  ("บ ESC - wyjdz     ณ                 บ");
-	puts  ("ศอออออออออออออออออฯอออออออออออออออออผ");
+	if(kontakt->filled)
+	{
+		puts("ษอออออออออออออออออออออออออออออออออออป");
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY);
+		printf("บ       Aktualny rekord: #%02d        บ\n", menu.record);
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
+		printf("บ Imie: %-27s บ\n", kontakt[menu.record].imie);
+		printf("บ Nazwisko: %-23s บ\n", kontakt[menu.record].nazwisko);
+		printf("บ Telefon: %-24d บ\n", kontakt[menu.record].telefon);
+		puts("วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤยฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤถ");
+		puts("บ E - edytuj      ณ U - usun        บ");
+		puts("บ D - dodaj       ณ W - wyswietl    บ");
+		puts("บ <- - poprzedni  ณ -> - nastepny   บ");
+		puts("บ ESC - wyjdz     ณ                 บ");
+		puts("ศอออออออออออออออออฯอออออออออออออออออผ");
+	}
+	else
+	{
+		puts("ษอออออออออออออออออออออออออออออออออออป");
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY);
+		printf("บ       Aktualny rekord: #%02d        บ\n", menu.record);
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
+		puts("บ               Pusto               บ");
+		puts("วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤยฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤถ");
+		puts("บ E - edytuj      ณ U - usun        บ");
+		puts("บ D - dodaj       ณ W - wyswietl    บ");
+		puts("บ <- - poprzedni  ณ -> - nastepny   บ");
+		puts("บ ESC - wyjdz     ณ                 บ");
+		puts("ศอออออออออออออออออฯอออออออออออออออออผ");
+	}
 }
 
 void printMenuRow(const char* string)

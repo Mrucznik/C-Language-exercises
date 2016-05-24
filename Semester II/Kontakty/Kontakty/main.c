@@ -30,6 +30,10 @@ void doTasks(Menu *menu, Contact *kontakty)
 		break;
 	case REMOVE_RECORD:
 		DeleteContact(&kontakty[menu->record]);
+		menu->option = PREVIOUS_RECORD;
+		doTasks(menu, kontakty);
+		system("cls");
+		printf("Pomyslnie usunieto!\n");
 		break;
 	case EDIT_RECORD:
 		EditContact(&kontakty[menu->record]);
