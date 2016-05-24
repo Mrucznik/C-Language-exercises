@@ -1,0 +1,20 @@
+Operacjê matematyczn¹: 2*(3+4) mo¿na przedstawiæ w postaci nastêpuj¹cego drzewa:
+
+    *
+   / \
+  /   +
+ /   / \
+2   3   4
+
+Zaproponuj konstrukcjê drzewa binarnego, w postaci struktur oraz funkcji, pozwalaj¹cych zbudowaæ drzewo reprezentuj¹ce wyra¿enie 2*(3+4) oraz wyznaczyæ wartoœæ tego wyra¿enia na podstawie drzewa.
+PodpowiedŸ:
+•	Wyra¿enie proszê zapisaæ w postaci wywo³ania funkcji zaproponowanego przez siebie API. 
+•	Zbiór API powinny tworzyæ:
+i.	funkcja generuj¹ca wêze³ wartoœci wezel* wartosc(double)
+ii.	funkcja generuj¹ca wêze³ operacji wezel* op(op, lewy*, prawy*
+iii.	funkcja wyznaczaj¹ca wartoœæ wêz³a/drzewa double wrtosc(wezel*)
+iv.	zwalniaj¹ce pamiêæ drzewa zwolnij(wezel*)
+Uwaga!
+•	Próba zamiany tekstu „2*(3+4)” na drzewo nie jest celem tego zadania.
+Jedyne miejsce, w których wolno odwo³ywaæ siê do pól w wêz³ach s¹ funkcje zaproponowanego API - funkcji s³u¿¹cych do budowy drzewa.
+
