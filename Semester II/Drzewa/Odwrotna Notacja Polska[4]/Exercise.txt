@@ -1,0 +1,9 @@
+Dane s¹ wyra¿enia przedstawione w Odwrotnej Notacji Polskiej:
+	100 200 + 300 + 400 + 
+	25 13 4 / + 2 * 
+	-5 25 13 4 / + * 2 * 
+	-2 -2 * -3 -4 - - 
+	1 -10 / 10 - 
+
+Napisz program, który zbuduje na ich podstawie drzewa a nastêpnie wyznaczy wartoœci tych drzew.
+
