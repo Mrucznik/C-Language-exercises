@@ -1,0 +1,8 @@
+Wykorzystuj¹c funkcje API zbudowane w poprzednim zadaniu, zbuduj nastêpuj¹ce drzewa:
+	100 + 200 + 300 + 400
+	(25 + 13 / 4) * 2
+	-5 * (25 + 13 / 4) * 2
+	-(20 + 30 * 40) + (40 - 30 / 20)
+	-2 * -2 -(-3 - -4)
+	-1 / -10 - 10
+
