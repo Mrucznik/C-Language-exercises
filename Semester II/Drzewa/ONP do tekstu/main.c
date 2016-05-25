@@ -56,7 +56,6 @@ void zwolnij(wezel* w)
 		zwolnij(w->P);
 
 	free(w);
-	w = NULL;
 }
 
 //-------------------< OPERATORY >-------------------
@@ -134,92 +133,78 @@ wezel* stack_pop(stack *s)
 //-------------------< ONP na drzewo >-------------------
 wezel* ONPnadrzewo(const char* onp)
 {
-	int stos_size = 5;
-	wezel **stos = (wezel**)malloc(sizeof(wezel) * stos_size);
-	int sidx = 0;
+	stack stos;
+	stack_init(&stos);
 
+	char bufor[12];
+	int bufor_idx = 0;
 	for (int i = 0; onp[i] != '\0'; i++)
 	{
-		if (isdigit(onp[i]) || onp[i] == '-' && isdigit(onp[i + 1])) //dodawanie wêz³a cyfry do stosu
+		if (isdigit(onp[i]) || onp[i] == '-' && isdigit(onp[i + 1])) //dodawanie cyfr do bufora
 		{
-			int liczba;
-			int cyfra = 0;
-			char bufor[12];
-			for (; isdigit(onp[i]) || onp[i] == '-'; i++)
-			{
-				bufor[cyfra] = onp[i];
-				cyfra++;
-			}
-			bufor[cyfra] = '\0';
-			liczba = atoi(bufor);
-			stos[sidx] = wartosc(liczba);
-			sidx++;
-			if (sidx >= stos_size)
-			{
-				stos_size++;
-				stos = realloc(stos, (stos_size) * sizeof(wezel));
-			}
+			bufor[bufor_idx] = onp[i];
+			bufor_idx++;
+			bufor[bufor_idx] = '\0';
 		}
-		else //dodawanie wêz³a operatora do stosu
+		else //dodawanie wêz³a do stosu
 		{
-			sidx--;
+			wezel *tmp;
 			switch (onp[i])
 			{
 			case ' ':
-				sidx++;
+				if(bufor_idx)
+				{
+					stack_push(&stos, wartosc(atoi(bufor)));
+					bufor_idx = 0;
+				}
 				break;
 			case '+':
-				stos[sidx - 1] = op(suma, stos[sidx - 1], stos[sidx]);
+				tmp = stack_pop(&stos);
+				stack_push(&stos, op(suma, stack_pop(&stos), tmp));
 				break;
 			case '-':
-				stos[sidx - 1] = op(roznica, stos[sidx - 1], stos[sidx]);
+				tmp = stack_pop(&stos);
+				stack_push(&stos, op(roznica, stack_pop(&stos), tmp));
 				break;
 			case '*':
-				stos[sidx - 1] = op(mnozenie, stos[sidx - 1], stos[sidx]);
+				tmp = stack_pop(&stos);
+				stack_push(&stos, op(mnozenie, stack_pop(&stos), tmp));
 				break;
 			case '/':
-				stos[sidx - 1] = op(dzielenie, stos[sidx - 1], stos[sidx]);
+				tmp = stack_pop(&stos);
+				stack_push(&stos, op(dzielenie, stack_pop(&stos), tmp));
 				break;
 			}
-
 		}
 	}
-	return *stos;
+	wezel *tmp = stack_pop(&stos);
+	stack_free(&stos);
+	return tmp;
 }
 
 
 //-------------------< MAIN >-------------------
 int main(void)
 {
-	//test
-	stack s;
-	stack_init(&s);
-	stack_push(&s, wartosc(10.0));
-	stack_push(&s, wartosc(5.0));
-	printf("Wartosc: %lf\n", ewaluacja(stack_pop(&s)));
-	printf("Wartosc: %lf\n", ewaluacja(stack_pop(&s)));
-	stack_free(&s);
+	setlocale(LC_ALL, "");//polskie znaki
+	wezel* drzewo = ONPnadrzewo("100 200 + 300 + 400 +");
+	printf("Wynik 100 200 + 300 + 400 + : %lf\n", ewaluacja(drzewo));
+	zwolnij(drzewo);
 
-	//setlocale(LC_ALL, "");//polskie znaki
+	drzewo = ONPnadrzewo("25 13 4 / + 2 *");
+	printf("Wynik 25 13 4 / + 2 *: %lf\n", ewaluacja(drzewo));
+	zwolnij(drzewo);
 
-	//wezel* drzewo = ONPnadrzewo("100 200 + 300 + 400 +");
-	//printf("Wynik 100 200 + 300 + 400 + : %lf\n", ewaluacja(drzewo));
-	//zwolnij(drzewo);
+	drzewo = ONPnadrzewo("-5 25 13 4 / + * 2 *");
+	printf("Wynik -5 25 13 4 / + * 2 *: %lf\n", ewaluacja(drzewo));
+	zwolnij(drzewo);
 
-	//drzewo = ONPnadrzewo("25 13 4 / + 2 *");
-	//printf("Wynik 25 13 4 / + 2 *: %lf\n", ewaluacja(drzewo));
-	//zwolnij(drzewo);
+	drzewo = ONPnadrzewo("-2 -2 * -3 -4 - - ");
+	printf("Wynik -2 -2 * -3 -4 - - : %lf\n", ewaluacja(drzewo));
+	zwolnij(drzewo);
 
-	//drzewo = ONPnadrzewo("-5 25 13 4 / + * 2 *");
-	//printf("Wynik -5 25 13 4 / + * 2 *: %lf\n", ewaluacja(drzewo));
-	//zwolnij(drzewo);
-
-	//drzewo = ONPnadrzewo("-2 -2 * -3 -4 - - ");
-	//printf("Wynik -2 -2 * -3 -4 - - : %lf\n", ewaluacja(drzewo));
-	//zwolnij(drzewo);
-
-	//drzewo = ONPnadrzewo("1 -10 / 10 - ");
-	//printf("Wynik 1 -10 / 10 - : %lf\n", ewaluacja(drzewo));
-	//zwolnij(drzewo);
+	drzewo = ONPnadrzewo("1 -10 / 10 - ");
+	printf("Wynik 1 -10 / 10 - : %lf\n", ewaluacja(drzewo));
+	zwolnij(drzewo);
 	return 0;
 }
