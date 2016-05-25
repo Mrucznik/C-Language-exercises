@@ -182,29 +182,56 @@ wezel* ONPnadrzewo(const char* onp)
 	return tmp;
 }
 
+//-------------------< Drzewo do tekstu >-------------------
+void DrzewoNaTekst(wezel* drzewo)
+{
+	if (drzewo == NULL) return;
+	if (drzewo->typ == OP)
+	{
+		putchar('(');
+		DrzewoNaTekst(drzewo->L);
+		if(drzewo->operator == suma)
+			printf(" + ");
+		else if (drzewo->operator == roznica)
+			printf(" - ");
+		else if (drzewo->operator == mnozenie)
+			printf(" * ");
+		else if (drzewo->operator == dzielenie)
+			printf(" / ");
+		DrzewoNaTekst(drzewo->P);
+		putchar(')');
+	}
+	else
+		printf("%lf", drzewo->wartosc);
+}
 
 //-------------------< MAIN >-------------------
 int main(void)
 {
 	setlocale(LC_ALL, "");//polskie znaki
 	wezel* drzewo = ONPnadrzewo("100 200 + 300 + 400 +");
-	printf("Wynik 100 200 + 300 + 400 + : %lf\n", ewaluacja(drzewo));
+	printf("Wynik 100 200 + 300 + 400 + : %lf\nWersja tekstowa: ", ewaluacja(drzewo));
+	DrzewoNaTekst(drzewo); puts("\n");
 	zwolnij(drzewo);
 
 	drzewo = ONPnadrzewo("25 13 4 / + 2 *");
-	printf("Wynik 25 13 4 / + 2 *: %lf\n", ewaluacja(drzewo));
+	printf("Wynik 25 13 4 / + 2 *: %lf\nWersja tekstowa: ", ewaluacja(drzewo));
+	DrzewoNaTekst(drzewo); puts("\n");
 	zwolnij(drzewo);
 
 	drzewo = ONPnadrzewo("-5 25 13 4 / + * 2 *");
-	printf("Wynik -5 25 13 4 / + * 2 *: %lf\n", ewaluacja(drzewo));
+	printf("Wynik -5 25 13 4 / + * 2 *: %lf\nWersja tekstowa: ", ewaluacja(drzewo));
+	DrzewoNaTekst(drzewo); puts("\n");
 	zwolnij(drzewo);
 
 	drzewo = ONPnadrzewo("-2 -2 * -3 -4 - - ");
-	printf("Wynik -2 -2 * -3 -4 - - : %lf\n", ewaluacja(drzewo));
+	printf("Wynik -2 -2 * -3 -4 - - : %lf\nWersja tekstowa: ", ewaluacja(drzewo));
+	DrzewoNaTekst(drzewo); puts("\n");
 	zwolnij(drzewo);
 
 	drzewo = ONPnadrzewo("1 -10 / 10 - ");
-	printf("Wynik 1 -10 / 10 - : %lf\n", ewaluacja(drzewo));
+	printf("Wynik 1 -10 / 10 - : %lf\nWersja tekstowa: ", ewaluacja(drzewo));
+	DrzewoNaTekst(drzewo); puts("\n");
 	zwolnij(drzewo);
 	return 0;
 }
