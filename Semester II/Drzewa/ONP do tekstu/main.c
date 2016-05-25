@@ -97,7 +97,7 @@ double cosinus(wezel* a, wezel* b)
 typedef struct stack
 {
 	int size;
-	wezel* items;
+	wezel** items;
 } stack;
 
 void stack_init(stack *s)
@@ -111,21 +111,21 @@ void stack_free(stack *s)
 	free(s->items);
 }
 
-void stack_push(stack *s, const wezel i)
+void stack_push(stack *s, wezel* i)
 {
 	s->size++;
 	s->items = realloc(s->items, sizeof(wezel)*s->size);
 	s->items[s->size - 1] = i;
 }
 
-wezel stack_pop(stack *s)
+wezel* stack_pop(stack *s)
 {
 	if(s->size == 0)
 	{
 		printf("Stack empty!");
 		exit(1);
 	}
-	wezel w = s->items[s->size - 1];
+	wezel *w = s->items[s->size - 1];
 	s->size--;
 	s->items = realloc(s->items, sizeof(wezel)*s->size);
 	return w;
@@ -192,16 +192,12 @@ wezel* ONPnadrzewo(const char* onp)
 int main(void)
 {
 	//test
-	wezel *test = wartosc(10.0);
 	stack s;
 	stack_init(&s);
-	stack_push(&s, *test);
-	test->wartosc = 5.0;
-	stack_push(&s, *test);
-	wezel ss = stack_pop(&s);
-	printf("Wartosc: %lf\n", ewaluacja(&ss));
-	ss = stack_pop(&s);
-	printf("Wartosc: %lf\n", ewaluacja(&ss));
+	stack_push(&s, wartosc(10.0));
+	stack_push(&s, wartosc(5.0));
+	printf("Wartosc: %lf\n", ewaluacja(stack_pop(&s)));
+	printf("Wartosc: %lf\n", ewaluacja(stack_pop(&s)));
 	stack_free(&s);
 
 	//setlocale(LC_ALL, "");//polskie znaki
