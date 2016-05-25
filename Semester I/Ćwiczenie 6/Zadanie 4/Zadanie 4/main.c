@@ -7,7 +7,7 @@
 int main(void)
 {
 	int a, b;
-	bool wszystkie = true;
+	int wszystkie = 1;
 	printf("Podaj granice przedzialu <a, b>: ");
 	scanf("%d%d", &a, &b);
 	printf("Obliczanie nierownosci n^3+20n<3n^2+370 dla przedzialu <%d, %d> . . . \n\n", a, b);
@@ -17,7 +17,7 @@ int main(void)
 		if (!(n*n*n + 20 * n < 2 * n*n + 370))
 		{
 			printf("Liczba %d nie spelnia tej nierownosci\n", n);
-			wszystkie = false;
+			wszystkie = 0;
 		}
 	}
 
