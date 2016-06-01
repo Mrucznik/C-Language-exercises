@@ -83,5 +83,6 @@ int main(void)
 	pomnoz(l, lz(4.3, -2.3), l);
 	wyswietl(l);
 
+	free(l);
 	return 0;
 }
