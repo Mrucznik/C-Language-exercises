@@ -1,0 +1,17 @@
+Do tej pory kod obs³ugi stosu uwzglêdnia³ tylko jeden typ danych: int.
+Zaimplementuj wersje stosu dla nastêpuj¹cych typów: 
+•	char, unsigned char,
+•	short, unsigned short,
+•	int, unsigned int,
+•	long int, unsigned long int,
+•	long long int, unsigned long long int,
+•	float, double
+Utworzone wersje API stosu musz¹ pozwalaæ pracowaæ z nimi w ramach tego samego kodu Ÿród³owego (np. program wykorzystuj¹cy dwa stosy typu int oraz 1 typu float). Przyk³ad:
+stack_int_t* stos1 = stack_int_create(32);
+stack_int_t* stos2 = stack_int_create(32);
+stack_float_t* stos3 = stack_float_create(123);
+
+PodpowiedŸ 1: Skorzystaj z makrodefinicji - #define.
+PodpowiedŸ 2: Postaraj siê nieprzepracowaæ :)
+
+
