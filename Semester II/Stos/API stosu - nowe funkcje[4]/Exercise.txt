@@ -1,0 +1,9 @@
+Dodaj funkcje realizuj¹ce nastêpuj¹ce operacje:
+•	funkcjê usuwaj¹c¹ wszystkie elementy ze stosu,
+•	funkcjê zapisuj¹c¹ zawartoœæ stosu do pliku binarnego,
+•	funkcjê wczytuj¹c¹ zawartoœæ stosu z pliku binarnego,
+
+Uwaga. Wczytanie/zapisanie stosu to nie tylko wczytanie/zapisanie bufora danych ale równie¿ wszystkich informacji koneicznych do skorzystania ze stosu po jego wczytaniu.
+Uwaga! Utrzymaj nomenklaturê funkcji.
+
+a
