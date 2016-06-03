@@ -1,0 +1,34 @@
+Zaimplementuj api obs³uguj¹ce stos wartoœci typu int. Zaproponuj strukturê stack_t.
+Zaimplementuj nastêpuj¹ce funkcje API:
+
+Funkcja tworzy nowy stos o wielkoœci size elementów typu int i zwraca wskaŸnik do tego stosu.
+	stack_t* stack_create(int size);
+
+Funkcja k³adzie na stos now¹ wartoœæ.
+	void stack_push(stack_t* pstack, int value);
+
+Funkcja zdejmuje ze stosu istniej¹c¹ wartoœæ oraz j¹ zwraca.
+	int stack_pop(stack_t* pstack);
+
+Funkcja sprawdza, czy stos jest pusty. Jeœli tak, zwraca wartoœæ prawdy (1).
+	bool stack_empty(const stack_t* pstack);
+
+Funkcja zwalnia ca³a pamiêæ zwi¹zan¹ ze stosem pstack.
+	void stack_free(stack_t* pstack);
+
+Funkcja wyœwietla wszystkie elementy stosu, bez jego modyfikowania.
+	void stack_print(const stack_t* pstack);
+
+Pamiêtaj, ¿e do pó³ struktury stack_t mog¹ odwo³ywaæ siê jedynie funkcjie API stosu.
+PodpowiedŸ: nieuto¿szamiaj stosu z tablic¹. Stos to nie tylko zbiór odpowiednio u³o¿onych elementów, ale te¿ informacja o tym, ile ich tam jest i jak du¿o mo¿e byæ.
+
+Przyk³ad uzycia:
+struct stack_t* stos = stack_create(10);
+stack_push(stos, 10);
+stack_push(stos, 20);
+stack_push(stos, 30);
+stack_print(stos);
+printf("%d\n", stack_pop(stos)); // 30
+stack_print(stos); // 20 10
+
+
