@@ -1,0 +1,10 @@
+W obecnej wersji zapimplementowane API wykorzystuje funkcjê:
+	stack_t* stack_create(int size);
+która tworzy stos o sta³ej pojemnoœci size elementów. Zmodyfikuj swoj¹ implementacjê tak, aby uzyskaæ funkcjê o prototypie:
+	stack_t* stack_create(int initial_capacity);
+która utoworzy stos o pocz¹tkowej pojemnoœci initial_capacity elementów. W momencie, kiedy program bêdzie chcia³ dodaæ do stosu o jeden element za du¿o, funkcja stack_push ma zwiêkszyæ pojemnoœæ stosu. Pamiêtaj, aby nie utraciæ informacji o elementach ju¿ bêd¹cych na stosie.
+Test:
+	stack_t* stos = stack_create(32);
+	for (int i = 0; i <= 1000; i++)
+		stack_push(stos, i);
+Napisz podobn¹ pêtlê to sprawdzenia, czy wartoœci zdejmowane ze stosu s¹ poprawne (1000 -> 1).
