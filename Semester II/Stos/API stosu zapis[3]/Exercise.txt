@@ -1,0 +1,8 @@
+Zmodyfikuj API stosu z poprzedniego zadania tak, aby:
+•	funkcja stack_push by³a w stanie informowaæ program wywo³uj¹cy o tym, ¿e stos jest przep³niony (np. zwracaj¹c true/false).
+•	funkcja stack_pop by³¹ w stanie informowaæ program, ¿e na stosie nie zasta³a ¿adnego elementu, który mo¿naby z niego zdj¹æ.
+
+Uwaga! Przy tak doœæ ró¿nycn sposobie dzia³ania nowych wersji push/pop dobrze jest nie modyfikowaæ istniej¹cych a dodaæ nowe, np: stack_try_push  (próbuj po³o¿yæ wartoœæ na stos, jak siê nie uda - zwróæ informacje o tym fakcie).
+
+S³ownie opisz dzia³anie wprowadzonych zmian.
+
