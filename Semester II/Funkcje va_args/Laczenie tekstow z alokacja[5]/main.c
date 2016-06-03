@@ -1,57 +1,41 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
 #include <stdlib.h>
 
-void concat(char **bufor, int size, int ile, ...)
+char* concat(int ile, ...)
 {
 	va_list ap;
 	va_start(ap, ile);
-	char *tmp = (char*)malloc(size * sizeof(char));
-	int totallength = 0;
+	char* bufor = NULL;
 
-	*bufor = (char*)malloc(size * sizeof(char));
-	tmp[0] = '\0';
-	*bufor[0] = '\0';
+	int buf_i = 0;
 	for (int i = 0; i<ile; i++)
 	{
-		int length;
-		strcpy(tmp, va_arg(ap, char*));
-		length = strlen(tmp);
-
-		if (totallength + length + 1 > size)
+		char *str = va_arg(ap, char*);
+		for (int j = 0; str[j] != '\0'; j++)
 		{
-			if (totallength + 4 > size)
-			{
-				//dwukropek:
-				(*bufor)[size - 1] = '\0';
-				(*bufor)[size - 2] = '.';
-				(*bufor)[size - 3] = '.';
-				(*bufor)[size - 4] = '.';
-			}
-			else if (size > 4)
-			{
-				//dwukropek:
-				(*bufor)[totallength + 3] = '\0';
-				(*bufor)[totallength + 2] = '.';
-				(*bufor)[totallength + 1] = '.';
-				(*bufor)[totallength] = '.';
-			}
-			break;
+			bufor = realloc(bufor, buf_i + 1);
+			bufor[buf_i] = str[j];
+			buf_i++;
 		}
-		totallength += length;
-		strcat(*bufor, tmp);
 	}
-
-	free(tmp);
+	bufor = realloc(bufor, buf_i + 1);
+	bufor[buf_i] = '\0';
 	va_end(ap);
+	return bufor;
 }
 
 int main(void)
 {
-	char *string;
-	concat(&string, 10, 5, "Ten", " tekst", " zostal", " zlaczony", " poprawnie");
-	printf("Zlaczone teksty: %s\n", string);
-	free(string);
+	char *buffer;
+	buffer = concat(3, "Ala", "ma", "kota");
+	printf("Zlaczone teksty: %s\n", buffer);
+	free(buffer);
+	buffer = concat(5, "Ala", " ", "ma", " ", "kota");
+	printf("Zlaczone teksty: %s\n", buffer);
+	free(buffer);
+	buffer = concat(4, "Wlazl", "KotekNaPlotek", " i", " mruga");
+	printf("Zlaczone teksty: %s\n", buffer);
+	free(buffer);
 	return 0;
 }

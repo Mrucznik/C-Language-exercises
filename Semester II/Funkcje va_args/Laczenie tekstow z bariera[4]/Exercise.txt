@@ -1,2 +1,6 @@
-Napisz i przetestuj funkcjê, która ³¹czy N tekstów do wspólnego bufora. Bufor ma byæ alokowany wewn¹trz funkcji i zwracany przez ni¹, wraz z tekstami. Pamiêtaj o zwalnianiu pamiêci przed koñcem programu.
-
+Napisz i przetestuj funkcjê ³¹cz¹c¹ N tekstów do wspólnego bufora o okreœlonej wielkoœci. Funkcja ma przyjmowaæ w parametrze: bufor tekstowy, jego d³ugoœæ, liczbê tekstów oraz kolejne teksty. Teksty nale¿y dodawaæ do bufora tak, aby nie przekroczyæ jego d³ugoœci. Jeœli tak siê stanie, nale¿y przerwaæ dodawanie a na koñcu bufora umieœciæ wielokropek "...". Pamiêtaj o znaku '\x0' na koñcu bufora.
+Przyk³adowy test:
+char buffer[10];
+concat(buffer, sizeof(buffer), 3, "Ala", "ma", "kota");
+concat(buffer, sizeof(buffer), 5, "Ala", " ", "ma", " ", "kota");
+concat(buffer, sizeof(buffer), 4, "Wlazl", "KotekNaPlotek", " i", " mruga");

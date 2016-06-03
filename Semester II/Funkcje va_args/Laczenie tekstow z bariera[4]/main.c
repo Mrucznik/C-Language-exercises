@@ -3,53 +3,55 @@
 #include <string.h>
 #include <stdlib.h>
 
+void dodaj_kropki(char str[], int size)
+{
+	if(size >= 4)
+	{
+		for (int i = 2; i < 5; i++)
+			str[size - i] = '.';
+		str[size - 1] = '\0';
+	}
+	else
+	{
+		for (int i = 0; i < size-1; i++)
+			str[i] = '.';
+		str[size-1] = '\0';
+	}
+}
+
 void concat(char bufor[], int size, int ile, ...)
 {
 	va_list ap;
 	va_start(ap, ile);
-	char *tmp = (char*)malloc(size);
-	int totallength = 0;
 
-	tmp[0] = '\0';
-	bufor[0] = '\0';
+	int buf_i=0;
 	for (int i = 0; i<ile; i++)
 	{
-		int length;
-		strcpy(tmp, va_arg(ap, char*));
-		length = strlen(tmp);
-
-		if(totallength+length+1 > size)
+		char *str = va_arg(ap, char*);
+		for(int j=0; str[j] != '\0'; j++)
 		{
-			if (totallength + 4 > size)
+			if (buf_i >= size - 4)
 			{
-				//dwukropek:
-				bufor[size - 1] = '\0';
-				bufor[size - 2] = '.';
-				bufor[size - 3] = '.';
-				bufor[size - 4] = '.';
+				dodaj_kropki(bufor, size);
+				va_end(ap);
+				return;
 			}
-			else if(size > 4)
-			{
-				//dwukropek:
-				bufor[totallength + 3] = '\0';
-				bufor[totallength + 2] = '.';
-				bufor[totallength + 1] = '.';
-				bufor[totallength] = '.';
-			}
-			break;
+			bufor[buf_i] = str[j];
+			buf_i++;
 		}
-		totallength += length;
-		strcat(bufor, tmp);
 	}
-
-	free(tmp);
+	bufor[buf_i] = '\0';
 	va_end(ap);
 }
 
 int main(void)
 {
-	char string[10];
-	concat(string, sizeof(string), 5, "Ten", " tekst", " zostal", " zlaczony", " poprawnie");
-	printf("Zlaczone teksty: %s\n", string);
+	char buffer[25];
+	concat(buffer, sizeof(buffer), 3, "Ala", "ma", "kota");
+	printf("Zlaczone teksty: %s\n", buffer);
+	concat(buffer, sizeof(buffer), 5, "Ala", " ", "ma", " ", "kota");
+	printf("Zlaczone teksty: %s\n", buffer);
+	concat(buffer, sizeof(buffer), 4, "Wlazl", "KotekNaPlotek", " i", " mruga");
+	printf("Zlaczone teksty: %s\n", buffer);
 	return 0;
 }
