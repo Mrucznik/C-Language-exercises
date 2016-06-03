@@ -18,6 +18,12 @@ static char nazwy_miesiecy[12][13] = {
 	"grudzieñ"
 };
 
+enum plec_t
+{
+	MEZCZYZNA,
+	KOBIETA
+};
+
 struct data_t
 {
 	int dzien;
@@ -31,11 +37,7 @@ struct kontakt_t
 	char nazwisko[32];
 	int numer_tel;
 	struct data_t data_urodzenia;
-	enum plec_t
-	{
-		MEZCZYZNA,
-		KOBIETA
-	} plec;
+	enum plec_t plec;
 };
 
 void otworzPlik(FILE** file, const char* filename, const char* mode)
