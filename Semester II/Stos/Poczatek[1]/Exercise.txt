@@ -1,0 +1,10 @@
+Wykorzystuj¹c tablicê statyczn¹ zaimplementuj podstawowy mechanizm stosu. Wykonaj nastêpuj¹ce operacje:
+push(1)
+push(2)
+push(3)
+Wyœwietl wyniki trzech operacji pop(). Pamiêtaj, ¿e funkcja pop zdejmuje wartoœæ ze stosu i j¹ zwraca. Po wyœwietleniu sprawdŸ, czy stos jest pusty oraz czy wartoœæ wskaŸnika wierzcho³ka ma sens.
+
+Przyk³adowe prototypy:
+void push(int value);
+int pop(void);
+
