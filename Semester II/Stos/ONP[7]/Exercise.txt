@@ -1,0 +1,17 @@
+Dane s¹ wyra¿enia matematyczne w zapisie ONP (Odwróconej Notacji Polskiej ang. Reverse Polish Notation - RNP).
+	100 200 + 300 + 400 + 
+	25 13 4 / + 2 * 
+	-5 25 13 4 / + * 2 * 
+	0 20 30 40 * + - 40 30 20 / - + 
+	-2 -2 * -3 -4 - - 
+	1 -10 / 10 - 
+Wyznaczono je dla poni¿szych wyra¿eñ (podanych tylko dla ilustracji):
+	100 + 200 + 300 + 400
+	(25 + 13 / 4) * 2
+	-5 * (25 + 13 / 4) * 2
+	0 - (20 + 30 * 40) + (40 - 30 / 20)
+	-2 * -2 -(-3 - -4)
+	-1 / -10 - 10
+
+Wykorzystuj¹c opracowane przez siebie API stosu, napisz program który wyznaczy wartoœæ wyra¿eñ w zapisie ONP.  Uzyskane wyniki wyœwietl w konsoli.
+PodpowiedŸ: wykorzystaj fakt, ¿e kolejne elementy zapisu ONP s¹ oddzielone spacjami oraz s¹: albo liczb¹ albo operatorem.
