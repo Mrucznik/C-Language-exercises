@@ -1,0 +1,8 @@
+Zaproponuj strukturê node_t przechowuj¹c¹ jedn¹ liczbê ca³kowit¹.
+•	Utwórz listê rootA, przechowuj¹c¹ liczby z zakresu 0-10. Dodawanie elementów do listy zrealizuj rêcznie (bez pêtli, bez funkcji).
+•	Utwórz listê rootB, przechowuj¹c¹ liczby z zakresu 20-30. Dodawanie elementów zarealizuj za pomoc¹ pêtli. Elementy dodawaj na koñcu listy.
+•	Utwórz listê rootC, przechowuj¹c¹ liczby z zakresu 40-50. Dodawanie elementów zarealizuj za pomoc¹ pêtli. Elementy dodawaj na pocz¹tku listy.
+•	Utwórz listê rootD, przechowuj¹ca liczby z zakresu 60-70. Elementy dodawaj po n-tym elemencie listy. Wartoœæ n losuj. Wykorzystaj funkcjê o przyk³adowym prototypie: void dodaj(node_t* root, int n, node_t* item);
+
+W ka¿dej liœcie ma znajdowaæ siê po 20 elementów.
+Po utworzeniu list wyœwietl je na ekranie. U¿yj do tego jednej funkcji. Pamiêtaj o modyfikatorze const w parametrze funkcji wyœwietlaj¹cej.
